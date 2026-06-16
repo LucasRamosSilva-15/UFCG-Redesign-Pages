@@ -1,7 +1,7 @@
 export const quickAccessItems = [
   { label: 'Portal do Aluno', icon: 'school', href: '#' },
   { label: 'SIGAA', icon: 'dashboard', href: '#' },
-  { label: 'SUAP', icon: 'desktop_windows', href: '#' },
+  { label: 'Controle Acadêmico Online', icon: 'desktop_windows', href: '#' },
   { label: 'SEI', icon: 'folder_open', href: '#' },
   { label: 'Biblioteca', icon: 'local_library', href: '#' },
   { label: 'Restaurante Universitário', icon: 'restaurant', href: '#' },
