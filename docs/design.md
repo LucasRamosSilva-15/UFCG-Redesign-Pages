@@ -1,66 +1,40 @@
 ---
-name: Academic Excellence Framework
+name: UFCG Institutional Framework
 colors:
-  surface: '#f8f9fa'
+  background: '#F8FAFC'
+  surface: '#F8FAFC'
   surface-dim: '#d9dadb'
-  surface-bright: '#f8f9fa'
+  surface-bright: '#F8FAFC'
   surface-container-lowest: '#ffffff'
   surface-container-low: '#f3f4f5'
   surface-container: '#edeeef'
   surface-container-high: '#e7e8e9'
   surface-container-highest: '#e1e3e4'
-  on-surface: '#191c1d'
-  on-surface-variant: '#444653'
-  inverse-surface: '#2e3132'
-  inverse-on-surface: '#f0f1f2'
+  surface-white: '#FFFFFF'
+  border-gray: '#E6E6E6'
   outline: '#747684'
   outline-variant: '#c4c5d5'
-  surface-tint: '#3557bc'
-  primary: '#002068'
+  text: '#1E293B'
+  text-main: '#1E293B'
+  on-surface: '#1E293B'
+  on-surface-variant: '#444653'
+  primary: '#002D72'
+  primary-dark: '#001B4D'
+  primary-reflex: '#001489'
+  primary-fixed: '#E6F7FD'
   on-primary: '#ffffff'
-  primary-container: '#003399'
-  on-primary-container: '#8aa4ff'
-  inverse-primary: '#b5c4ff'
-  secondary: '#705d00'
-  on-secondary: '#ffffff'
-  secondary-container: '#fcd400'
-  on-secondary-container: '#6e5c00'
-  tertiary: '#072459'
-  on-tertiary: '#ffffff'
-  tertiary-container: '#233b70'
-  on-tertiary-container: '#90a7e3'
+  on-primary-fixed: '#001B4D'
+  accent: '#00AFEB'
   error: '#ba1a1a'
   on-error: '#ffffff'
   error-container: '#ffdad6'
   on-error-container: '#93000a'
-  primary-fixed: '#dce1ff'
-  primary-fixed-dim: '#b5c4ff'
-  on-primary-fixed: '#00164e'
-  on-primary-fixed-variant: '#153ea3'
-  secondary-fixed: '#ffe16d'
-  secondary-fixed-dim: '#e9c400'
-  on-secondary-fixed: '#221b00'
-  on-secondary-fixed-variant: '#544600'
-  tertiary-fixed: '#dae2ff'
-  tertiary-fixed-dim: '#b1c5ff'
-  on-tertiary-fixed: '#001946'
-  on-tertiary-fixed-variant: '#2e457b'
-  background: '#f8f9fa'
-  on-background: '#191c1d'
-  surface-variant: '#e1e3e4'
-  institutional-blue: '#003399'
-  accent-gold: '#FFD700'
-  deep-navy: '#001F54'
-  surface-white: '#FFFFFF'
-  border-gray: '#E6E6E6'
-  text-main: '#333333'
 typography:
   display-lg:
     fontFamily: IBM Plex Serif
     fontSize: 48px
     fontWeight: '600'
     lineHeight: 56px
-    letterSpacing: -0.02em
   headline-lg:
     fontFamily: IBM Plex Serif
     fontSize: 32px
@@ -100,9 +74,9 @@ typography:
     letterSpacing: 0.03em
   utility-bar:
     fontFamily: IBM Plex Sans
-    fontSize: 13px
-    fontWeight: '400'
-    lineHeight: 18px
+    fontSize: 12px
+    fontWeight: '500'
+    lineHeight: 16px
 rounded:
   sm: 0.125rem
   DEFAULT: 0.25rem
@@ -111,75 +85,120 @@ rounded:
   xl: 0.75rem
   full: 9999px
 spacing:
-  utility-height: 40px
+  utility-height: 26px
+  header-height: 64px
   margin-mobile: 16px
+  margin-tablet: 32px
   margin-desktop: 48px
   gutter: 24px
   stack-sm: 8px
   stack-md: 16px
   stack-lg: 32px
   max-width: 1280px
+  header-max-width: 1180px
 ---
 
 ## Brand & Style
 
-This design system is engineered for a Brazilian Federal University, prioritizing institutional authority, academic rigor, and democratic accessibility. The aesthetic direction is **Corporate / Modern**, leaning heavily into structured layouts and clear information hierarchies that reflect the stability of a public institution. 
+This design system is tailored for the Universidade Federal de Campina Grande (UFCG). The visual direction is institutional, academic, accessible, and modern, with a palette closer to the official shield: a deep federal blue, a darker blue for structural areas, and a bright cyan accent derived from the shield's light blue field.
 
-The design avoids "SaaS-like" playfulness in favor of a sophisticated, timeless look. It balances the traditional weight of a historical institution with the clean, functional requirements of a modern digital infrastructure. The visual language conveys trust, transparency, and the high standards of federal higher education.
+The site should feel public, reliable, and organized rather than promotional. Interfaces must prioritize hierarchy, scanning, and clarity for students, candidates, staff, researchers, and the broader community.
 
 ## Colors
 
-The palette is anchored by **Institutional Blue**, a color associated with stability and the Brazilian federal identity. **Deep Navy** is utilized for high-contrast text and deep structural backgrounds, ensuring maximum legibility and a sense of "academic weight."
+The palette is anchored by **Institutional Blue** (`#002D72`), used for main navigation text, important links, icon color, card hover states, outlines, and primary actions.
 
-**Gold** is a prestigious accent color used exclusively for highlights, such as active states in navigation or specific call-to-action iconography, and should never dominate the layout. The background strategy relies on **Pure White** for content areas and **Light Gray** for sectional grounding, providing a clean, high-contrast environment suitable for long-form reading and data-heavy interfaces.
+**Primary Dark** (`#001B4D`) is reserved for deep structural surfaces: the top utility bar, footer, dark statistic bands, dark hero overlays, and primary button hover states. Text placed on this color must remain white.
+
+**Reflex Blue Support** (`#001489`) is a stronger supporting blue used sparingly for active/hover emphasis when a deeper saturated blue is useful. It should not dominate large surfaces.
+
+**Cyan Accent** (`#00AFEB`) is the highlight accent. It is used for visual details: active navigation underline, section rules, footer top border, status borders, subtle badges, small highlights, and decorative accents. Avoid using it as small body text on white backgrounds; prefer `#002D72` for readable text and use cyan for lines, borders, icons, or filled details.
+
+The background is **Slate White** (`#F8FAFC`) and the main text color is **Slate Text** (`#1E293B`). Cards and content containers use white with `#E6E6E6` borders.
+
+Current Tailwind tokens in `src/index.css`:
+
+```css
+--color-primary: #002D72;
+--color-primary-dark: #001B4D;
+--color-primary-reflex: #001489;
+--color-accent: #00AFEB;
+--color-background: #F8FAFC;
+--color-text: #1E293B;
+--color-text-main: #1E293B;
+```
 
 ## Typography
 
-The typography strategy employs a "High-Contrast Pairing." **IBM Plex Serif** is the voice of the institution—authoritative and literary—used for all major headings and editorial titles. It provides the "Academic" feel required for a university setting.
+The typography strategy remains a high-contrast academic pairing.
 
-**IBM Plex Sans** is used for all body text, UI labels, and data inputs. Its technical, systematic nature ensures clarity across complex forms and informational pages. For mobile devices, headline sizes scale down to maintain readability without excessive wrapping. All labels use a slight increase in letter spacing to enhance legibility at smaller scales.
+**IBM Plex Serif** is used for major headings, section titles, and brand-adjacent text. It gives the site a more academic and institutional voice.
+
+**IBM Plex Sans** is used for body copy, utility links, navigation, cards, tables, buttons, and labels. Navigation labels may use compact uppercase-style tracking, but letter spacing must stay readable and should not force wrapping.
 
 ## Layout & Spacing
 
-The system uses a **Fixed Grid** model for desktop, centered within a 1280px container to ensure content remains readable on wide monitors. A 12-column grid provides the flexibility needed for complex academic portals.
+The system uses a centered responsive container:
 
-- **Desktop:** 12 columns / 24px gutters / 48px outer margins.
-- **Tablet:** 8 columns / 20px gutters / 32px outer margins.
-- **Mobile:** 4 columns / 16px gutters / 16px outer margins.
+- **Global content:** max width of 1280px.
+- **Header content:** max width of 1180px to match the compact official-page feel.
+- **Desktop:** 12-column rhythm / 24px gutters / 48px outer margins.
+- **Tablet:** 8-column rhythm / 20px gutters / 32px outer margins.
+- **Mobile:** 4-column rhythm / 16px gutters / 16px outer margins.
 
-The **Utility Top Bar** is a fixed 40px element at the very top of the viewport, housing mandatory federal links (Acesso à Informação, Transparência). Vertical rhythm is maintained through a strict 8px base unit, ensuring consistent spacing between headings, paragraphs, and components.
+The header has two layers:
+
+- **Utility bar:** 26px tall, `#002D72` background, white utility links, cyan hover/detail link for "Sistemas UFCG".
+- **Main header:** 64px tall, white background, UFCG logo/brand on the left, compact navigation centered, search and mobile menu controls on the right.
+
+Vertical rhythm follows an 8px base unit. Section padding should remain generous, especially on homepage bands.
 
 ## Elevation & Depth
 
-To maintain a "Professional" rather than "App" look, this design system uses **Tonal Layers** supplemented by **Low-Contrast Outlines**. Surfaces do not "float" aggressively; instead, they are distinguished by subtle value shifts.
+The system uses tonal layers and restrained shadows. Cards should not float aggressively.
 
-- **Level 0 (Background):** Light Gray (#F8F9FA) for the main canvas.
-- **Level 1 (Cards/Content):** Pure White (#FFFFFF) with a 1px border of #E6E6E6.
-- **Level 2 (Interaction):** When hovered or active, components receive a subtle, diffused shadow (0px 4px 12px rgba(0, 31, 84, 0.08)) to indicate depth without breaking the formal aesthetic.
-- **Dividers:** Used frequently in lists and cards to create "clear hierarchical divisions" using #E6E6E6.
+- **Level 0 (Background):** `#F8FAFC`.
+- **Level 1 (Cards/Content):** `#FFFFFF` with `1px` border `#E6E6E6`.
+- **Level 2 (Interaction):** subtle shadow such as `0px 4px 12px rgba(0, 45, 114, 0.08)`.
+- **Deep Areas:** `#001B4D` for footer, statistic band, and dark overlays.
+- **Dividers:** `#E6E6E6`.
 
 ## Shapes
 
-The shape language is **Soft (0.25rem)**. This slight rounding provides a modern touch while remaining conservative and serious. Sharp corners (0px) are reserved for the Utility Top Bar and Global Footer to "frame" the interface within a rigid, institutional structure. Elements like primary buttons and informational cards use the `rounded-md` (0.25rem) or `rounded-lg` (0.5rem) settings to feel approachable but grounded.
+The shape language is conservative and slightly softened. Cards, buttons, and controls generally use `rounded-lg` or smaller. The top utility bar and footer remain visually structural and can use sharp edges.
+
+Cards should keep an 8px radius or less unless a local component requires otherwise.
 
 ## Components
 
 ### Utility Top Bar
-A high-contrast bar at the top of the page using **Deep Navy** (#001F54) background and White text. It contains text-based links for "Acesso à Informação" and "Brasil" institutional logos.
+
+Use `#002D72` background with white text. Utility links include "UFCG", "Acesso à Informação", "Transparência", "Ouvidoria", "SEI", "Sistemas", "Contato", and a highlighted "Sistemas UFCG" action. Cyan (`#00AFEB`) is allowed for the highlighted utility action and hover states.
+
+### Main Header
+
+Use a white background with the UFCG shield/logo at a proportional size. If the logo image already contains the institution name, do not duplicate the name. If the selected logo is shield-only, show "Universidade Federal de Campina Grande" once beside it.
+
+Desktop navigation is compact and centered. Active navigation uses primary text with a cyan underline. Mobile navigation may collapse into a simple menu.
 
 ### Cards
-Cards are the primary container for content modules. They must have a #E6E6E6 border and a Pure White background. Headers within cards should be separated by a subtle 1px horizontal rule.
+
+Cards use white backgrounds, `#E6E6E6` borders, and primary-blue iconography. Hover states may use `border-primary` and a subtle `rgba(0, 45, 114, 0.08)` shadow.
 
 ### Buttons
-- **Primary:** Institutional Blue (#003399) background, White text. Squared with 0.25rem radius.
-- **Secondary:** White background, Institutional Blue border and text.
-- **Accent:** Gold (#FFD700) is used only for high-priority alerts or specific icons within a button, never as the primary button background to avoid a commercial "sale" look.
 
-### Input Fields
-Fields use a 1px #E6E6E6 border that transitions to Institutional Blue on focus. Use IBM Plex Sans for input text. Label text must be `label-md` in Deep Navy.
+- **Primary:** `#002D72` background, white text, hover `#001B4D`.
+- **Secondary:** white background, `#002D72` border and text.
+- **Accent details:** `#00AFEB` for underline, small badges, section rules, and borders. Avoid cyan-filled buttons for primary actions unless text contrast is explicitly checked.
 
-### Lists & Tables
-Academic data must be presented in structured tables with #F8F9FA zebra-striping on rows. Header rows use Deep Navy background with White IBM Plex Sans Bold text.
+### Footer
+
+Use `#001B4D` background with white text and a `#00AFEB` top border. Footer column headings use cyan. Body links remain white or white with opacity for readability.
+
+### Tables & Notices
+
+Tables keep white or light surfaces with structured borders. Category/status pills may use `primary-fixed` or subtle cyan tints such as `bg-accent/10`, `border-accent/30`, and primary text for contrast.
 
 ### Breadcrumbs
-Essential for navigation in deep academic hierarchies; use `label-sm` in Institutional Blue for links and Text-Main for the current page.
+
+Use `label-sm`. Links use primary blue (`#002D72`) and the current page uses `#1E293B`.
