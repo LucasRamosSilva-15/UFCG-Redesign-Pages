@@ -1,0 +1,736 @@
+<!DOCTYPE html><html lang="pt-BR" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Universidade Federal de Campina Grande - UFCG</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Serif:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary-container": "#6e5c00",
+                        "accent": "#00AFEB",
+                        "tertiary-fixed": "#dae2ff",
+                        "surface-container": "#edeeef",
+                        "surface": "#F8FAFC",
+                        "on-error-container": "#93000a",
+                        "primary": "#002D72",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed": "#ffe16d",
+                        "surface-container-high": "#e7e8e9",
+                        "surface-container-low": "#f3f4f5",
+                        "primary-fixed": "#E6F7FD",
+                        "inverse-on-surface": "#f0f1f2",
+                        "surface-white": "#FFFFFF",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed-variant": "#544600",
+                        "primary-container": "#002D72",
+                        "inverse-primary": "#b5c4ff",
+                        "on-tertiary-fixed": "#001946",
+                        "outline-variant": "#c4c5d5",
+                        "inverse-surface": "#2e3132",
+                        "text-main": "#1E293B",
+                        "on-surface-variant": "#444653",
+                        "tertiary-fixed-dim": "#b1c5ff",
+                        "tertiary": "#072459",
+                        "on-background": "#1E293B",
+                        "on-secondary": "#ffffff",
+                        "tertiary-container": "#233b70",
+                        "on-tertiary-container": "#90a7e3",
+                        "on-secondary-fixed": "#221b00",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#001B4D",
+                        "surface-tint": "#3557bc",
+                        "primary-fixed-dim": "#b5c4ff",
+                        "on-primary-fixed-variant": "#001489",
+                        "on-primary-container": "#00AFEB",
+                        "primary": "#002D72",
+                        "secondary-container": "#fcd400",
+                        "secondary-fixed-dim": "#e9c400",
+                        "primary": "#002D72",
+                        "secondary": "#705d00",
+                        "outline": "#747684",
+                        "border-gray": "#E6E6E6",
+                        "surface-dim": "#d9dadb",
+                        "on-surface": "#1E293B",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#F8FAFC",
+                        "surface-container-highest": "#e1e3e4",
+                        "surface-variant": "#e1e3e4",
+                        "background": "#F8FAFC",
+                        "on-tertiary-fixed-variant": "#2e457b",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-lowest": "#ffffff"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.125rem",
+                        lg: "0.25rem",
+                        xl: "0.5rem",
+                        full: "0.75rem"
+                    },
+                    spacing: {
+                        "gutter": "24px",
+                        "stack-lg": "32px",
+                        "max-width": "1280px",
+                        "utility-height": "40px",
+                        "stack-sm": "8px",
+                        "stack-md": "16px",
+                        "margin-desktop": "48px",
+                        "margin-mobile": "16px"
+                    },
+                    fontFamily: {
+                        "label-md": ["IBM Plex Sans"],
+                        "body-md": ["IBM Plex Sans"],
+                        "utility-bar": ["IBM Plex Sans"],
+                        "headline-md": ["IBM Plex Serif"],
+                        "headline-lg": ["IBM Plex Serif"],
+                        "label-sm": ["IBM Plex Sans"],
+                        "body-lg": ["IBM Plex Sans"],
+                        "headline-lg-mobile": ["IBM Plex Serif"],
+                        "display-lg": ["IBM Plex Serif"]
+                    },
+                    fontSize: {
+                        "label-md": ["14px", { lineHeight: "20px", letterSpacing: "0.05em", fontWeight: "600" }],
+                        "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+                        "utility-bar": ["13px", { lineHeight: "18px", fontWeight: "400" }],
+                        "headline-md": ["24px", { lineHeight: "32px", fontWeight: "500" }],
+                        "headline-lg": ["32px", { lineHeight: "40px", fontWeight: "600" }],
+                        "label-sm": ["12px", { lineHeight: "16px", letterSpacing: "0.03em", fontWeight: "500" }],
+                        "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+                        "headline-lg-mobile": ["28px", { lineHeight: "36px", fontWeight: "600" }],
+                        "display-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #F8FAFC; color: #1E293B; font-family: 'IBM Plex Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .icon-fill { font-variation-settings: 'FILL' 1; }
+    </style>
+</head>
+<body class="bg-background text-text-main flex flex-col min-h-screen">
+<!-- TopNavBar -->
+<nav class="bg-primary dark:bg-primary text-on-primary dark:text-on-primary docked full-width top-0 z-50">
+<div class="flex justify-between items-center w-full h-[40px] px-margin-desktop max-w-max-width mx-auto">
+<div class="flex items-center space-x-6">
+<span class="text-utility-bar font-utility-bar font-bold text-on-primary">UFCG</span>
+<div class="hidden md:flex space-x-4">
+<a class="text-utility-bar font-utility-bar text-on-primary opacity-90 hover:text-accent transition-colors duration-200" href="#">Acesso à Informação</a>
+<a class="text-utility-bar font-utility-bar text-on-primary opacity-90 hover:text-accent transition-colors duration-200" href="#">Transparência</a>
+<a class="text-utility-bar font-utility-bar text-on-primary opacity-90 hover:text-accent transition-colors duration-200" href="#">Ouvidoria</a>
+<a class="text-utility-bar font-utility-bar text-on-primary opacity-90 hover:text-accent transition-colors duration-200" href="#">SEI</a>
+<a class="text-utility-bar font-utility-bar text-on-primary opacity-90 hover:text-accent transition-colors duration-200" href="#">Sistemas</a>
+<a class="text-utility-bar font-utility-bar text-on-primary opacity-90 hover:text-accent transition-colors duration-200" href="#">Contato</a>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<a class="text-utility-bar font-utility-bar font-semibold text-accent hover:text-white transition-colors duration-200" href="#">Sistemas UFCG</a>
+</div>
+</div>
+</nav>
+<!-- Main Header & Nav -->
+<header class="bg-surface-white border-b border-border-gray sticky top-[40px] z-40">
+<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-max-width mx-auto">
+<div class="flex items-center space-x-4"><div class="flex items-center h-[56px]"><img alt="UFCG Official Logo" class="h-[56px] w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpFiDUWyV4EPtBekwodH0_a3JcM2Kfo5oYRFk5FsHKPFCH_j7CPtxAKMJ2C_ZUINYoTf6_oYc6N0miB3RsQUpFHwqaTFe7uJub6Ckkj7Y0uQd2kdiodxnBy7OWs07gW-AGZDJ2Nv8U0CV7N3jZP0hQxADZHKiH_9Ctmmiv7DVm7KEUQxVQ9fF4P3by0FABxkROgAoAVYvCZH_Xvt4btV3Wo9oSBQa89nKZAIZ5GIrZh5m2JZHZj1EcRF9a4PlmM02iYCzA_ytNQMVYHGQ"></div></div>
+<nav class="hidden lg:flex space-x-6">
+<a class="text-label-md font-label-md text-primary font-bold border-b-2 border-primary pb-1" href="#">A UFCG</a>
+<a class="text-label-md font-label-md text-on-surface-variant font-medium hover:text-primary transition-colors" href="#">Cursos</a>
+<a class="text-label-md font-label-md text-on-surface-variant font-medium hover:text-primary transition-colors" href="#">Pesquisa e Inovação</a>
+<a class="text-label-md font-label-md text-on-surface-variant font-medium hover:text-primary transition-colors" href="#">Extensão</a>
+<a class="text-label-md font-label-md text-on-surface-variant font-medium hover:text-primary transition-colors" href="#">Assistência Estudantil</a>
+<a class="text-label-md font-label-md text-on-surface-variant font-medium hover:text-primary transition-colors" href="#">Campi</a>
+<a class="text-label-md font-label-md text-on-surface-variant font-medium hover:text-primary transition-colors" href="#">Editais</a>
+<a class="text-label-md font-label-md text-on-surface-variant font-medium hover:text-primary transition-colors" href="#">Notícias</a>
+</nav>
+<div class="flex items-center space-x-4">
+<button class="p-2 text-primary hover:bg-surface-container-low rounded-lg transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative w-full h-[600px] flex items-center justify-center overflow-hidden">
+<img alt="Campus Sede da Universidade Federal de Campina Grande" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLsTf3-lVG3euF3YRCq8Fsve1uR-qZxKFDj0BrGYcQ5gCsXV6gHl-e5Qb8VVsKGQ5PrsJk6Xr-UcBryCmn5YVOfT8KqXg7fdModlLEn24K0dEXXZ1aarCLR-ptbOYOEuhCdI6hMDD9T8x_hf9wI84d6ngIlIR2OzhQp8FG9e-dRhaPBLr_UYwSOx5k29JoHQxsCgwp07dD3x_kCVvVrKx0sbPaEyRVBGjp7XZLEZkdCDZpPNmhcOoLlEdSGm">
+<div class="absolute inset-0 bg-gradient-to-r from-primary-dark/90 to-primary/45"></div>
+<div class="relative z-10 w-full px-margin-desktop max-w-max-width mx-auto flex flex-col md:flex-row items-center justify-between">
+<div class="max-w-2xl text-white">
+<h2 class="text-display-lg font-display-lg mb-4 text-white">Universidade Federal de Campina Grande</h2>
+<p class="text-body-lg font-body-lg mb-8 text-white/90">Conhecimento, inovação e compromisso social no desenvolvimento da Paraíba e do Brasil.</p>
+<div class="flex flex-wrap gap-4 mb-8">
+<span class="inline-flex items-center px-3 py-1 rounded bg-white/20 text-white text-label-sm font-label-sm backdrop-blur-sm border border-white/30"><span class="material-symbols-outlined text-[16px] mr-2">location_on</span>7 campi</span>
+<span class="inline-flex items-center px-3 py-1 rounded bg-white/20 text-white text-label-sm font-label-sm backdrop-blur-sm border border-white/30"><span class="material-symbols-outlined text-[16px] mr-2">school</span>Ensino público e gratuito</span>
+<span class="inline-flex items-center px-3 py-1 rounded bg-white/20 text-white text-label-sm font-label-sm backdrop-blur-sm border border-white/30"><span class="material-symbols-outlined text-[16px] mr-2">science</span>Pesquisa e extensão</span>
+</div>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-white px-6 py-3 rounded-lg text-label-md font-label-md hover:bg-primary transition-colors shadow-sm">Conheça a UFCG</button>
+<button class="bg-white text-primary px-6 py-3 rounded-lg text-label-md font-label-md border border-primary hover:bg-surface-container-low transition-colors shadow-sm">Cursos de Graduação</button>
+<button class="bg-transparent text-white px-6 py-3 rounded-lg text-label-md font-label-md border border-white hover:bg-white/10 transition-colors">Editais e Seleções</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 1. Expanded Quick Access -->
+<section class="py-12 bg-surface">
+<div class="max-w-max-width mx-auto px-margin-desktop">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+<a class="flex flex-col items-center justify-center p-4 bg-surface-white border border-border-gray rounded-lg hover:shadow-md transition-shadow group" href="#">
+<span class="material-symbols-outlined text-primary text-3xl mb-2 group-hover:scale-110 transition-transform">school</span>
+<span class="text-label-sm font-label-sm text-text-main text-center">Portal do Aluno</span>
+</a>
+<a class="flex flex-col items-center justify-center p-4 bg-surface-white border border-border-gray rounded-lg hover:shadow-md transition-shadow group" href="#">
+<span class="material-symbols-outlined text-primary text-3xl mb-2 group-hover:scale-110 transition-transform">dashboard</span>
+<span class="text-label-sm font-label-sm text-text-main text-center">SIGAA</span>
+</a>
+<a class="flex flex-col items-center justify-center p-4 bg-surface-white border border-border-gray rounded-lg hover:shadow-md transition-shadow group" href="#">
+<span class="material-symbols-outlined text-primary text-3xl mb-2 group-hover:scale-110 transition-transform">desktop_windows</span>
+<span class="text-label-sm font-label-sm text-text-main text-center">SUAP</span>
+</a>
+<a class="flex flex-col items-center justify-center p-4 bg-surface-white border border-border-gray rounded-lg hover:shadow-md transition-shadow group" href="#">
+<span class="material-symbols-outlined text-primary text-3xl mb-2 group-hover:scale-110 transition-transform">folder_open</span>
+<span class="text-label-sm font-label-sm text-text-main text-center">SEI</span>
+</a>
+<a class="flex flex-col items-center justify-center p-4 bg-surface-white border border-border-gray rounded-lg hover:shadow-md transition-shadow group" href="#">
+<span class="material-symbols-outlined text-primary text-3xl mb-2 group-hover:scale-110 transition-transform">local_library</span>
+<span class="text-label-sm font-label-sm text-text-main text-center">Biblioteca</span>
+</a>
+<a class="flex flex-col items-center justify-center p-4 bg-surface-white border border-border-gray rounded-lg hover:shadow-md transition-shadow group" href="#">
+<span class="material-symbols-outlined text-primary text-3xl mb-2 group-hover:scale-110 transition-transform">restaurant</span>
+<span class="text-label-sm font-label-sm text-text-main text-center">Restaurante Universitário</span>
+</a>
+<a class="flex flex-col items-center justify-center p-4 bg-surface-white border border-border-gray rounded-lg hover:shadow-md transition-shadow group" href="#">
+<span class="material-symbols-outlined text-primary text-3xl mb-2 group-hover:scale-110 transition-transform">calendar_month</span>
+<span class="text-label-sm font-label-sm text-text-main text-center">Calendário Acadêmico</span>
+</a>
+<a class="flex flex-col items-center justify-center p-4 bg-surface-white border border-border-gray rounded-lg hover:shadow-md transition-shadow group" href="#">
+<span class="material-symbols-outlined text-primary text-3xl mb-2 group-hover:scale-110 transition-transform">support_agent</span>
+<span class="text-label-sm font-label-sm text-text-main text-center">Assistência Estudantil</span>
+</a>
+<a class="flex flex-col items-center justify-center p-4 bg-surface-white border border-border-gray rounded-lg hover:shadow-md transition-shadow group" href="#">
+<span class="material-symbols-outlined text-primary text-3xl mb-2 group-hover:scale-110 transition-transform">description</span>
+<span class="text-label-sm font-label-sm text-text-main text-center">Editais</span>
+</a>
+<a class="flex flex-col items-center justify-center p-4 bg-surface-white border border-border-gray rounded-lg hover:shadow-md transition-shadow group" href="#">
+<span class="material-symbols-outlined text-primary text-3xl mb-2 group-hover:scale-110 transition-transform">work</span>
+<span class="text-label-sm font-label-sm text-text-main text-center">Concursos</span>
+</a>
+<a class="flex flex-col items-center justify-center p-4 bg-surface-white border border-border-gray rounded-lg hover:shadow-md transition-shadow group" href="#">
+<span class="material-symbols-outlined text-primary text-3xl mb-2 group-hover:scale-110 transition-transform">record_voice_over</span>
+<span class="text-label-sm font-label-sm text-text-main text-center">Ouvidoria</span>
+</a>
+<a class="flex flex-col items-center justify-center p-4 bg-surface-white border border-border-gray rounded-lg hover:shadow-md transition-shadow group" href="#">
+<span class="material-symbols-outlined text-primary text-3xl mb-2 group-hover:scale-110 transition-transform">location_city</span>
+<span class="text-label-sm font-label-sm text-text-main text-center">Campi</span>
+</a>
+</div>
+</div>
+</section>
+<!-- 2. News and Highlights -->
+<section class="py-16 bg-surface-white">
+<div class="max-w-max-width mx-auto px-margin-desktop">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h2 class="text-headline-lg font-headline-lg font-semibold text-primary mb-2">Notícias e Destaques</h2>
+<div class="w-16 h-1 bg-accent"></div>
+</div>
+<a class="text-label-md font-label-md text-primary hover:underline hidden sm:block" href="#">Ver todas as notícias →</a>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Main Feature -->
+<div class="lg:col-span-7 group cursor-pointer">
+<div class="relative overflow-hidden rounded-lg mb-4 aspect-[16/9]">
+<img alt="Estudantes em laboratório da UFCG" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLt_jS0SJDFn3XKL9ate0hQocKFb0DN9Z71kFjpAysppmoBmgMCC2lsDCs8rEt2QvJybf1SnjnrBiVjOM82WriT_bPu0zeojFveaKxmdj64yQfEJ5gypk26fKG2dwYwlh_UxqU6qaAzplNm6To-JgWM107TMCct2Mv95D-vR3y3DQz-TXIrunLuja8WPUuEgAqjUzRh-g3RxbtYnkZC6ELRk8q5exOo-f_3SEn0fueaCxdGiZQ_nnUM4_oY">
+<div class="absolute top-4 left-4">
+<span class="bg-primary text-white text-xs font-bold px-2 py-1 rounded uppercase tracking-wider">Pesquisa</span>
+</div>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant mb-2">15 de Maio de 2024</p>
+<h3 class="text-headline-md font-headline-md font-semibold text-text-main group-hover:text-primary transition-colors mb-2">Pesquisadores da UFCG desenvolvem nova tecnologia sustentável para tratamento de água no semiárido</h3>
+<p class="text-body-md font-body-md text-on-surface-variant line-clamp-2">Projeto financiado por edital nacional visa baratear o custo de acesso à água potável em comunidades rurais isoladas da Paraíba utilizando materiais locais.</p>
+</div>
+<!-- Side News -->
+<div class="lg:col-span-5 flex flex-col justify-between space-y-6">
+<div class="group cursor-pointer flex gap-4">
+<div class="w-32 h-24 shrink-0 overflow-hidden rounded bg-surface-container-high">
+<div class="w-full h-full bg-surface-container-highest"></div>
+</div>
+<div>
+<p class="text-label-sm font-label-sm text-primary font-semibold mb-1">Ensino • 14/05/2024</p>
+<h4 class="text-body-lg font-body-lg font-semibold text-text-main group-hover:text-primary transition-colors line-clamp-2">UFCG anuncia calendário de matrículas para o período 2024.1</h4>
+</div>
+</div>
+<div class="group cursor-pointer flex gap-4">
+<div class="w-32 h-24 shrink-0 overflow-hidden rounded bg-surface-container-high">
+<div class="w-full h-full bg-surface-container-highest"></div>
+</div>
+<div>
+<p class="text-label-sm font-label-sm text-primary font-semibold mb-1">Extensão • 12/05/2024</p>
+<h4 class="text-body-lg font-body-lg font-semibold text-text-main group-hover:text-primary transition-colors line-clamp-2">Inscrições abertas para o programa de voluntariado em projetos de extensão</h4>
+</div>
+</div>
+<div class="group cursor-pointer flex gap-4">
+<div class="w-32 h-24 shrink-0 overflow-hidden rounded bg-surface-container-high">
+<div class="w-full h-full bg-surface-container-highest"></div>
+</div>
+<div>
+<p class="text-label-sm font-label-sm text-primary font-semibold mb-1">Institucional • 10/05/2024</p>
+<h4 class="text-body-lg font-body-lg font-semibold text-text-main group-hover:text-primary transition-colors line-clamp-2">Conselho Universitário aprova novo regimento interno da pós-graduação</h4>
+</div>
+</div>
+<a class="text-label-md font-label-md text-primary hover:underline sm:hidden mt-4 inline-block" href="#">Ver todas as notícias →</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Escolha seu caminho -->
+<section class="py-16 bg-surface">
+<div class="max-w-max-width mx-auto px-margin-desktop">
+<h2 class="text-headline-lg font-headline-lg font-semibold text-primary mb-8 text-center">Para quem você é?</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+<!-- Estudante -->
+<div class="bg-surface-white p-6 rounded-lg border border-border-gray shadow-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 bg-primary-fixed rounded-full flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary">school</span>
+</div>
+<h3 class="text-body-lg font-body-lg font-semibold text-primary mb-4 border-b border-border-gray pb-2">Estudante</h3>
+<ul class="space-y-3">
+<li class=""><a class="text-label-sm font-label-sm text-text-main hover:text-primary flex items-center" href="#"><span class="material-symbols-outlined text-[16px] mr-2">chevron_right</span>Matrícula</a></li>
+<li class=""><a class="text-label-sm font-label-sm text-text-main hover:text-primary flex items-center" href="#"><span class="material-symbols-outlined text-[16px] mr-2">chevron_right</span>Calendário Acadêmico</a></li>
+<li class=""><a class="text-label-sm font-label-sm text-text-main hover:text-primary flex items-center" href="#"><span class="material-symbols-outlined text-[16px] mr-2">chevron_right</span>Assistência Estudantil</a></li>
+<li class=""><a class="text-label-sm font-label-sm text-text-main hover:text-primary flex items-center" href="#"><span class="material-symbols-outlined text-[16px] mr-2">chevron_right</span>Bibliotecas</a></li>
+</ul>
+</div>
+<!-- Candidato -->
+<div class="bg-surface-white p-6 rounded-lg border border-border-gray shadow-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 bg-primary-fixed rounded-full flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary">person_add</span>
+</div>
+<h3 class="text-body-lg font-body-lg font-semibold text-primary mb-4 border-b border-border-gray pb-2">Candidato</h3>
+<ul class="space-y-3">
+<li class=""><a class="text-label-sm font-label-sm text-text-main hover:text-primary flex items-center" href="#"><span class="material-symbols-outlined text-[16px] mr-2">chevron_right</span>Formas de Ingresso</a></li>
+<li class=""><a class="text-label-sm font-label-sm text-text-main hover:text-primary flex items-center" href="#"><span class="material-symbols-outlined text-[16px] mr-2">chevron_right</span>Cursos de Graduação</a></li>
+<li class=""><a class="text-label-sm font-label-sm text-text-main hover:text-primary flex items-center" href="#"><span class="material-symbols-outlined text-[16px] mr-2">chevron_right</span>Sisu</a></li>
+<li class=""><a class="text-label-sm font-label-sm text-text-main hover:text-primary flex items-center" href="#"><span class="material-symbols-outlined text-[16px] mr-2">chevron_right</span>Transferência</a></li>
+</ul>
+</div>
+<!-- Servidor -->
+<div class="bg-surface-white p-6 rounded-lg border border-border-gray shadow-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 bg-primary-fixed rounded-full flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary">badge</span>
+</div>
+<h3 class="text-body-lg font-body-lg font-semibold text-primary mb-4 border-b border-border-gray pb-2">Servidor</h3>
+<ul class="space-y-3">
+<li class=""><a class="text-label-sm font-label-sm text-text-main hover:text-primary flex items-center" href="#"><span class="material-symbols-outlined text-[16px] mr-2">chevron_right</span>Portal do Servidor</a></li>
+<li class=""><a class="text-label-sm font-label-sm text-text-main hover:text-primary flex items-center" href="#"><span class="material-symbols-outlined text-[16px] mr-2">chevron_right</span>Capacitação</a></li>
+<li class=""><a class="text-label-sm font-label-sm text-text-main hover:text-primary flex items-center" href="#"><span class="material-symbols-outlined text-[16px] mr-2">chevron_right</span>Gestão de Pessoas</a></li>
+<li class=""><a class="text-label-sm font-label-sm text-text-main hover:text-primary flex items-center" href="#"><span class="material-symbols-outlined text-[16px] mr-2">chevron_right</span>Concursos e Seleções</a></li>
+</ul>
+</div>
+<!-- Pesquisador -->
+<div class="bg-surface-white p-6 rounded-lg border border-border-gray shadow-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 bg-primary-fixed rounded-full flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary">science</span>
+</div>
+<h3 class="text-body-lg font-body-lg font-semibold text-primary mb-4 border-b border-border-gray pb-2">Pesquisador</h3>
+<ul class="space-y-3">
+<li class=""><a class="text-label-sm font-label-sm text-text-main hover:text-primary flex items-center" href="#"><span class="material-symbols-outlined text-[16px] mr-2">chevron_right</span>Editais de Pesquisa</a></li>
+<li class=""><a class="text-label-sm font-label-sm text-text-main hover:text-primary flex items-center" href="#"><span class="material-symbols-outlined text-[16px] mr-2">chevron_right</span>Grupos de Pesquisa</a></li>
+<li class=""><a class="text-label-sm font-label-sm text-text-main hover:text-primary flex items-center" href="#"><span class="material-symbols-outlined text-[16px] mr-2">chevron_right</span>Inovação e NIT</a></li>
+<li class=""><a class="text-label-sm font-label-sm text-text-main hover:text-primary flex items-center" href="#"><span class="material-symbols-outlined text-[16px] mr-2">chevron_right</span>Pós-Graduação</a></li>
+</ul>
+</div>
+<!-- Comunidade -->
+<div class="bg-surface-white p-6 rounded-lg border border-border-gray shadow-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 bg-primary-fixed rounded-full flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary">groups</span>
+</div>
+<h3 class="text-body-lg font-body-lg font-semibold text-primary mb-4 border-b border-border-gray pb-2">Comunidade</h3>
+<ul class="space-y-3">
+<li class=""><a class="text-label-sm font-label-sm text-text-main hover:text-primary flex items-center" href="#"><span class="material-symbols-outlined text-[16px] mr-2">chevron_right</span>Projetos de Extensão</a></li>
+<li class=""><a class="text-label-sm font-label-sm text-text-main hover:text-primary flex items-center" href="#"><span class="material-symbols-outlined text-[16px] mr-2">chevron_right</span>Serviços à Comunidade</a></li>
+<li class=""><a class="text-label-sm font-label-sm text-text-main hover:text-primary flex items-center" href="#"><span class="material-symbols-outlined text-[16px] mr-2">chevron_right</span>Eventos</a></li>
+<li class=""><a class="text-label-sm font-label-sm text-text-main hover:text-primary flex items-center" href="#"><span class="material-symbols-outlined text-[16px] mr-2">chevron_right</span>Museus e Espaços</a></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Cursos e Oportunidades -->
+<section class="py-16 bg-surface-white">
+<div class="max-w-max-width mx-auto px-margin-desktop">
+<div class="mb-8">
+<h2 class="text-headline-lg font-headline-lg font-semibold text-primary mb-2">Cursos e Oportunidades</h2>
+<div class="w-16 h-1 bg-accent"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<a class="flex items-center p-6 bg-surface border border-border-gray rounded-lg hover:border-primary hover:shadow-md transition-all group" href="#">
+<div class="w-12 h-12 bg-white rounded flex items-center justify-center mr-4 border border-border-gray group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white">school</span>
+</div>
+<div>
+<h3 class="text-body-lg font-body-lg font-semibold text-text-main group-hover:text-primary">Graduação</h3>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Cursos presenciais</p>
+</div>
+</a>
+<a class="flex items-center p-6 bg-surface border border-border-gray rounded-lg hover:border-primary hover:shadow-md transition-all group" href="#">
+<div class="w-12 h-12 bg-white rounded flex items-center justify-center mr-4 border border-border-gray group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white">workspace_premium</span>
+</div>
+<div>
+<h3 class="text-body-lg font-body-lg font-semibold text-text-main group-hover:text-primary">Pós-graduação</h3>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Mestrado e Doutorado</p>
+</div>
+</a>
+<a class="flex items-center p-6 bg-surface border border-border-gray rounded-lg hover:border-primary hover:shadow-md transition-all group" href="#">
+<div class="w-12 h-12 bg-white rounded flex items-center justify-center mr-4 border border-border-gray group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white">construction</span>
+</div>
+<div>
+<h3 class="text-body-lg font-body-lg font-semibold text-text-main group-hover:text-primary">Cursos Técnicos</h3>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Ensino técnico integrado</p>
+</div>
+</a>
+<a class="flex items-center p-6 bg-surface border border-border-gray rounded-lg hover:border-primary hover:shadow-md transition-all group" href="#">
+<div class="w-12 h-12 bg-white rounded flex items-center justify-center mr-4 border border-border-gray group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white">computer</span>
+</div>
+<div>
+<h3 class="text-body-lg font-body-lg font-semibold text-text-main group-hover:text-primary">Educação a Distância (EaD)</h3>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Cursos semipresenciais</p>
+</div>
+</a>
+<a class="flex items-center p-6 bg-surface border border-border-gray rounded-lg hover:border-primary hover:shadow-md transition-all group" href="#">
+<div class="w-12 h-12 bg-white rounded flex items-center justify-center mr-4 border border-border-gray group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white">assignment</span>
+</div>
+<div>
+<h3 class="text-body-lg font-body-lg font-semibold text-text-main group-hover:text-primary">Processos Seletivos</h3>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Ingresso na universidade</p>
+</div>
+</a>
+<a class="flex items-center p-6 bg-surface border border-border-gray rounded-lg hover:border-primary hover:shadow-md transition-all group" href="#">
+<div class="w-12 h-12 bg-white rounded flex items-center justify-center mr-4 border border-border-gray group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white">volunteer_activism</span>
+</div>
+<div>
+<h3 class="text-body-lg font-body-lg font-semibold text-text-main group-hover:text-primary">Bolsas e Auxílios</h3>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Apoio ao estudante</p>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- 5. Campi da UFCG -->
+<section class="py-16 bg-surface">
+<div class="max-w-max-width mx-auto px-margin-desktop">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h2 class="text-headline-lg font-headline-lg font-semibold text-primary mb-2">Campi da UFCG</h2>
+<div class="w-16 h-1 bg-accent"></div>
+</div>
+<a class="text-label-md font-label-md text-primary hover:underline hidden sm:block" href="#">Conheça a infraestrutura →</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Campina Grande -->
+<div class="bg-surface-white rounded-lg border border-border-gray overflow-hidden flex flex-col">
+<div class="h-32 bg-surface-container-high relative">
+<img alt="Campus Campina Grande" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLsTf3-lVG3euF3YRCq8Fsve1uR-qZxKFDj0BrGYcQ5gCsXV6gHl-e5Qb8VVsKGQ5PrsJk6Xr-UcBryCmn5YVOfT8KqXg7fdModlLEn24K0dEXXZ1aarCLR-ptbOYOEuhCdI6hMDD9T8x_hf9wI84d6ngIlIR2OzhQp8FG9e-dRhaPBLr_UYwSOx5k29JoHQxsCgwp07dD3x_kCVvVrKx0sbPaEyRVBGjp7XZLEZkdCDZpPNmhcOoLlEdSGm">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<h3 class="absolute bottom-3 left-4 text-white text-body-lg font-body-lg font-semibold">Campina Grande</h3>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<p class="text-label-sm font-label-sm text-on-surface-variant mb-4 flex-grow">Sede administrativa e maior campus da instituição.</p>
+<button class="text-primary text-label-sm font-label-sm font-semibold w-full text-left hover:underline">Ver campus →</button>
+</div>
+</div>
+<!-- Cajazeiras -->
+<div class="bg-surface-white rounded-lg border border-border-gray overflow-hidden flex flex-col">
+<div class="h-32 bg-surface-container-high relative">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+<h3 class="absolute bottom-3 left-4 text-white text-body-lg font-body-lg font-semibold z-20">Cajazeiras</h3>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<p class="text-label-sm font-label-sm text-on-surface-variant mb-4 flex-grow">Centro de Formação de Professores (CFP).</p>
+<button class="text-primary text-label-sm font-label-sm font-semibold w-full text-left hover:underline">Ver campus →</button>
+</div>
+</div>
+<!-- Cuité -->
+<div class="bg-surface-white rounded-lg border border-border-gray overflow-hidden flex flex-col">
+<div class="h-32 bg-surface-container-high relative">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+<h3 class="absolute bottom-3 left-4 text-white text-body-lg font-body-lg font-semibold z-20">Cuité</h3>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<p class="text-label-sm font-label-sm text-on-surface-variant mb-4 flex-grow">Centro de Educação e Saúde (CES).</p>
+<button class="text-primary text-label-sm font-label-sm font-semibold w-full text-left hover:underline">Ver campus →</button>
+</div>
+</div>
+<!-- Patos -->
+<div class="bg-surface-white rounded-lg border border-border-gray overflow-hidden flex flex-col">
+<div class="h-32 bg-surface-container-high relative">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+<h3 class="absolute bottom-3 left-4 text-white text-body-lg font-body-lg font-semibold z-20">Patos</h3>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<p class="text-label-sm font-label-sm text-on-surface-variant mb-4 flex-grow">Centro de Saúde e Tecnologia Rural (CSTR).</p>
+<button class="text-primary text-label-sm font-label-sm font-semibold w-full text-left hover:underline">Ver campus →</button>
+</div>
+</div>
+<!-- Pombal -->
+<div class="bg-surface-white rounded-lg border border-border-gray overflow-hidden flex flex-col">
+<div class="h-32 bg-surface-container-high relative">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+<h3 class="absolute bottom-3 left-4 text-white text-body-lg font-body-lg font-semibold z-20">Pombal</h3>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<p class="text-label-sm font-label-sm text-on-surface-variant mb-4 flex-grow">Centro de Ciências e Tecnologia Agroalimentar (CCTA).</p>
+<button class="text-primary text-label-sm font-label-sm font-semibold w-full text-left hover:underline">Ver campus →</button>
+</div>
+</div>
+<!-- Sousa -->
+<div class="bg-surface-white rounded-lg border border-border-gray overflow-hidden flex flex-col">
+<div class="h-32 bg-surface-container-high relative">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+<h3 class="absolute bottom-3 left-4 text-white text-body-lg font-body-lg font-semibold z-20">Sousa</h3>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<p class="text-label-sm font-label-sm text-on-surface-variant mb-4 flex-grow">Centro de Ciências Jurídicas e Sociais (CCJS).</p>
+<button class="text-primary text-label-sm font-label-sm font-semibold w-full text-left hover:underline">Ver campus →</button>
+</div>
+</div>
+<!-- Sumé -->
+<div class="bg-surface-white rounded-lg border border-border-gray overflow-hidden flex flex-col">
+<div class="h-32 bg-surface-container-high relative">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+<h3 class="absolute bottom-3 left-4 text-white text-body-lg font-body-lg font-semibold z-20">Sumé</h3>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<p class="text-label-sm font-label-sm text-on-surface-variant mb-4 flex-grow">Centro de Desenvolvimento Sustentável do Semiárido (CDSA).</p>
+<button class="text-primary text-label-sm font-label-sm font-semibold w-full text-left hover:underline">Ver campus →</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Pesquisa, Inovação e Extensão -->
+<section class="py-16 bg-surface-white">
+<div class="max-w-max-width mx-auto px-margin-desktop">
+<div class="mb-8 text-center">
+<h2 class="text-headline-lg font-headline-lg font-semibold text-primary mb-2">Pilares Acadêmicos</h2>
+<div class="w-16 h-1 bg-accent mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Pesquisa -->
+<div class="flex flex-col h-full bg-surface rounded-lg overflow-hidden border border-border-gray shadow-sm">
+<div class="h-48 overflow-hidden">
+<img alt="Pesquisa Científica" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLt_jS0SJDFn3XKL9ate0hQocKFb0DN9Z71kFjpAysppmoBmgMCC2lsDCs8rEt2QvJybf1SnjnrBiVjOM82WriT_bPu0zeojFveaKxmdj64yQfEJ5gypk26fKG2dwYwlh_UxqU6qaAzplNm6To-JgWM107TMCct2Mv95D-vR3y3DQz-TXIrunLuja8WPUuEgAqjUzRh-g3RxbtYnkZC6ELRk8q5exOo-f_3SEn0fueaCxdGiZQ_nnUM4_oY">
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex items-center mb-4">
+<span class="material-symbols-outlined text-primary mr-2 text-2xl">science</span>
+<h3 class="text-headline-md font-headline-md font-semibold text-primary">Pesquisa Científica</h3>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant flex-grow mb-6">Produção de conhecimento, iniciação científica e pós-graduação visando o desenvolvimento tecnológico e social.</p>
+<button class="w-full py-2 px-4 border border-primary text-primary rounded text-label-md font-label-md hover:bg-primary hover:text-white transition-colors">Saiba mais</button>
+</div>
+</div>
+<!-- Inovação -->
+<div class="flex flex-col h-full bg-surface rounded-lg overflow-hidden border border-border-gray shadow-sm">
+<div class="h-48 bg-surface-container-high overflow-hidden">
+<div class="w-full h-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-6xl text-primary/30">emoji_objects</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex items-center mb-4">
+<span class="material-symbols-outlined text-primary mr-2 text-2xl">lightbulb</span>
+<h3 class="text-headline-md font-headline-md font-semibold text-primary">Inovação e Tecnologia</h3>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant flex-grow mb-6">Transferência de tecnologia, patentes, empreendedorismo e parcerias com o setor produtivo através do NIT.</p>
+<button class="w-full py-2 px-4 border border-primary text-primary rounded text-label-md font-label-md hover:bg-primary hover:text-white transition-colors">Saiba mais</button>
+</div>
+</div>
+<!-- Extensão -->
+<div class="flex flex-col h-full bg-surface rounded-lg overflow-hidden border border-border-gray shadow-sm">
+<div class="h-48 overflow-hidden">
+<img alt="Extensão Universitária" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLt4FMzbm0v3MtULL5xozE5hdqmeSVQ855ruypmgAFfZJyAWrsCmZPwDYJaIKXsKhZ98E3SjGFqnx4M-Fom_zroVzTAzNeGpB4zdP29ulxYTGr54v-_1eSOCg-4GDPoX7-0ybQ2FEIuCYK4mXUbWj1YGrOO35zmVYTRc87GZRjrq7659MXbQQpaLVWcrePhMewkFr6gwpra8YUHgI5AHktv01g5OOhj2w5kNBHXRY1KI3gm6Pdh1MB3C2Lo">
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex items-center mb-4">
+<span class="material-symbols-outlined text-primary mr-2 text-2xl">diversity_3</span>
+<h3 class="text-headline-md font-headline-md font-semibold text-primary">Extensão Universitária</h3>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant flex-grow mb-6">Ações interativas que conectam a universidade à sociedade, promovendo a troca de saberes e o desenvolvimento local.</p>
+<button class="w-full py-2 px-4 border border-primary text-primary rounded text-label-md font-label-md hover:bg-primary hover:text-white transition-colors">Saiba mais</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. Editais e Comunicados -->
+<section class="py-16 bg-surface">
+<div class="max-w-max-width mx-auto px-margin-desktop">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h2 class="text-headline-lg font-headline-lg font-semibold text-primary mb-2">Editais e Comunicados</h2>
+<div class="w-16 h-1 bg-accent"></div>
+</div>
+<a class="text-label-md font-label-md text-primary hover:underline hidden sm:block" href="#">Mural completo →</a>
+</div>
+<div class="bg-surface-white rounded-lg border border-border-gray overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-label-sm font-label-sm text-on-surface-variant border-b border-border-gray">
+<th class="p-4 font-semibold w-32">Data</th>
+<th class="p-4 font-semibold w-40">Categoria</th>
+<th class="p-4 font-semibold">Título</th>
+<th class="p-4 font-semibold w-48 text-right">Status</th>
+</tr>
+</thead>
+<tbody class="text-body-md font-body-md text-text-main divide-y divide-border-gray">
+<tr class="hover:bg-surface-container-lowest transition-colors cursor-pointer group">
+<td class="p-4 text-label-sm font-label-sm">16/05/2024</td>
+<td class="p-4"><span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-primary-fixed text-on-primary-fixed">Graduação</span></td>
+<td class="p-4 group-hover:text-primary transition-colors">Edital PRPG Nº 15/2024 - Seleção de Monitores para o período 2024.1</td>
+<td class="p-4 text-right"><span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800 border border-green-200">Inscrições Abertas</span></td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors cursor-pointer group">
+<td class="p-4 text-label-sm font-label-sm">14/05/2024</td>
+<td class="p-4"><span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-purple-100 text-purple-800">Pesquisa</span></td>
+<td class="p-4 group-hover:text-primary transition-colors">Edital PIBIC/CNPq 2024/2025 - Programa Institucional de Bolsas de Iniciação Científica</td>
+<td class="p-4 text-right"><span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-accent/10 text-primary border border-accent/30">Em andamento</span></td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors cursor-pointer group">
+<td class="p-4 text-label-sm font-label-sm">10/05/2024</td>
+<td class="p-4"><span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-orange-100 text-orange-800">Extensão</span></td>
+<td class="p-4 group-hover:text-primary transition-colors">Resultado Preliminar do Edital PROEX Nº 08/2024 - Apoio a Projetos de Extensão</td>
+<td class="p-4 text-right"><span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-accent/10 text-primary border border-accent/30">Resultado Publicado</span></td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors cursor-pointer group">
+<td class="p-4 text-label-sm font-label-sm">05/05/2024</td>
+<td class="p-4"><span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-gray-100 text-gray-800">Concurso</span></td>
+<td class="p-4 group-hover:text-primary transition-colors">Edital Nº 03/2024 - Concurso Público para Professor Efetivo (Campus Campina Grande)</td>
+<td class="p-4 text-right"><span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-gray-100 text-gray-600 border border-gray-200">Encerrado</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. A UFCG em Números -->
+<section class="py-16 bg-primary-dark text-white relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPgo8cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjZmZmIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDBMOCA4Wk04IDBMMCA4WiIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEiPjwvcGF0aD4KPC9zdmc+')]"></div>
+<div class="max-w-max-width mx-auto px-margin-desktop relative z-10">
+<div class="text-center mb-12">
+<h2 class="text-headline-lg font-headline-lg font-semibold text-white mb-2">A UFCG em Números</h2>
+<div class="w-16 h-1 bg-accent mx-auto"></div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+<div>
+<p class="text-display-lg font-display-lg font-bold text-accent mb-2">7</p>
+<p class="text-label-md font-label-md text-white/80 uppercase tracking-wider">Campi</p>
+</div>
+<div>
+<p class="text-display-lg font-display-lg font-bold text-accent mb-2">97</p>
+<p class="text-label-md font-label-md text-white/80 uppercase tracking-wider">Cursos de Graduação</p>
+</div>
+<div>
+<p class="text-display-lg font-display-lg font-bold text-accent mb-2">54</p>
+<p class="text-label-md font-label-md text-white/80 uppercase tracking-wider">Programas de Pós-Graduação</p>
+</div>
+<div>
+<p class="text-display-lg font-display-lg font-bold text-accent mb-2">~20k</p>
+<p class="text-label-md font-label-md text-white/80 uppercase tracking-wider">Estudantes Matriculados</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary-dark text-on-primary w-full py-16 border-t-4 border-accent">
+<div class="px-margin-desktop max-w-max-width mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
+<div class="col-span-1 lg:col-span-2">
+<div class="mb-4 h-16 brightness-0 invert"></div>
+<address class="text-label-sm font-label-sm text-white/70 not-italic space-y-1 mb-6">
+Rua Aprígio Veloso, 882 - Universitário<br>
+Campina Grande - PB, CEP: 58429-900<br>
+CNPJ: 05.055.128/0001-76<br>
+Telefone: (83) 2101-1000
+</address>
+<div class="flex space-x-4">
+<a aria-label="Facebook" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">thumb_up</span>
+</a>
+<a aria-label="Instagram" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">photo_camera</span>
+</a>
+<a aria-label="Twitter" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">chat</span>
+</a>
+<a aria-label="YouTube" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">play_arrow</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-label-md font-label-md font-semibold text-accent mb-4 uppercase tracking-wider">Institucional</h4>
+<ul class="space-y-3">
+<li class=""><a class="text-label-sm font-label-sm text-white/80 hover:text-white transition-colors" href="#">A Instituição</a></li>
+<li class=""><a class="text-label-sm font-label-sm text-white/80 hover:text-white transition-colors" href="#">Reitoria</a></li>
+<li class=""><a class="text-label-sm font-label-sm text-white/80 hover:text-white transition-colors" href="#">Pró-Reitorias</a></li>
+<li class=""><a class="text-label-sm font-label-sm text-white/80 hover:text-white transition-colors" href="#">Centros e Unidades</a></li>
+<li class=""><a class="text-label-sm font-label-sm text-white/80 hover:text-white transition-colors" href="#">Conselhos Superiores</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-label-md font-label-md font-semibold text-accent mb-4 uppercase tracking-wider">Ensino e Pesquisa</h4>
+<ul class="space-y-3">
+<li class=""><a class="text-label-sm font-label-sm text-white/80 hover:text-white transition-colors" href="#">Graduação</a></li>
+<li class=""><a class="text-label-sm font-label-sm text-white/80 hover:text-white transition-colors" href="#">Pós-Graduação</a></li>
+<li class=""><a class="text-label-sm font-label-sm text-white/80 hover:text-white transition-colors" href="#">Pesquisa e Inovação</a></li>
+<li class=""><a class="text-label-sm font-label-sm text-white/80 hover:text-white transition-colors" href="#">Extensão</a></li>
+<li class=""><a class="text-label-sm font-label-sm text-white/80 hover:text-white transition-colors" href="#">Bibliotecas</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-label-md font-label-md font-semibold text-accent mb-4 uppercase tracking-wider">Serviços</h4>
+<ul class="space-y-3">
+<li class=""><a class="text-label-sm font-label-sm text-white/80 hover:text-white transition-colors" href="#">Portal do Aluno</a></li>
+<li class=""><a class="text-label-sm font-label-sm text-white/80 hover:text-white transition-colors" href="#">Portal do Servidor</a></li>
+<li class=""><a class="text-label-sm font-label-sm text-white/80 hover:text-white transition-colors" href="#">Sistemas Web</a></li>
+<li class=""><a class="text-label-sm font-label-sm text-white/80 hover:text-white transition-colors" href="#">SEI</a></li>
+<li class=""><a class="text-label-sm font-label-sm text-white/80 hover:text-white transition-colors" href="#">Webmail</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-label-md font-label-md font-semibold text-accent mb-4 uppercase tracking-wider">Acesso e Contato</h4>
+<ul class="space-y-3">
+<li class=""><a class="text-label-sm font-label-sm text-white/80 hover:text-white transition-colors" href="#">Transparência</a></li>
+<li class=""><a class="text-label-sm font-label-sm text-white/80 hover:text-white transition-colors" href="#">Acesso à Informação</a></li>
+<li class=""><a class="text-label-sm font-label-sm text-white/80 hover:text-white transition-colors" href="#">Ouvidoria</a></li>
+<li class=""><a class="text-label-sm font-label-sm text-white/80 hover:text-white transition-colors" href="#">Contato</a></li>
+<li class=""><a class="text-label-sm font-label-sm text-white/80 hover:text-white transition-colors" href="#">Imprensa</a></li>
+</ul>
+</div>
+</div>
+<div class="px-margin-desktop max-w-max-width mx-auto pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
+<p class="text-utility-bar font-utility-bar text-white/60 mb-4 md:mb-0">© 2024 Universidade Federal de Campina Grande - UFCG. Todos os direitos reservados.</p>
+<div class="flex space-x-6 text-utility-bar font-utility-bar text-white/60">
+<a class="hover:text-white transition-colors" href="#">Política de Privacidade</a>
+<a class="hover:text-white transition-colors" href="#">LGPD</a>
+<a class="hover:text-white transition-colors" href="#">Mapa do Site</a>
+</div>
+</div>
+</footer>
+
+
+</body></html>
