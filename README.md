@@ -35,7 +35,7 @@ O objetivo deste redesign é propor uma experiência mais clara, responsiva e in
 
 ## Funcionalidades e seções
 
-A página foi organizada em seções independentes e componentizadas:
+A página foi organizada como uma homepage única, com navegação e rodapé separados:
 
 - Header institucional
 - Hero section
@@ -55,26 +55,12 @@ A página foi organizada em seções independentes e componentizadas:
 src/
   assets/
   components/
-    Header.jsx
-    Hero.jsx
-    QuickAccess.jsx
-    NewsSection.jsx
-    ProfileAccess.jsx
-    CoursesSection.jsx
-    CampiSection.jsx
-    AcademicPillars.jsx
-    NoticesSection.jsx
-    StatsSection.jsx
+    Navbar.jsx
     Footer.jsx
+  pages/
+    Home.jsx
   data/
-    quickAccess.js
-    news.js
-    profiles.js
-    courses.js
-    campi.js
-    pillars.js
-    notices.js
-    stats.js
+    homeData.js
   App.jsx
   main.jsx
   index.css
@@ -83,8 +69,9 @@ src/
 ### Pastas principais
 
 - `src/assets`: imagens, logos e arquivos visuais usados no projeto.
-- `src/components`: componentes React responsáveis por cada seção da homepage.
-- `src/data`: listas e conteúdos reutilizáveis renderizados pelos componentes.
+- `src/components`: componentes globais da interface, como navbar e footer.
+- `src/pages`: páginas da aplicação. A homepage principal está em `Home.jsx`.
+- `src/data`: listas e conteúdos reutilizáveis da homepage centralizados em `homeData.js`.
 - `src/index.css`: configuração visual global, tokens de tema e estilos base do Tailwind CSS.
 - `docs/design.md`: documentação da direção visual e paleta institucional do projeto.
 

@@ -13,7 +13,7 @@ const navLinks = [
   'Notícias',
 ]
 
-function Header() {
+function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
@@ -102,4 +102,4 @@ function Header() {
   )
 }
 
-export default Header
+export default Navbar
