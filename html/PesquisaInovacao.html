@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pesquisa e Inovação - UFCG</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: IBM Plex Sans & Serif -->
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&amp;family=IBM+Plex+Serif:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#c4c5d5",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#dce1ff",
+                    "on-secondary-container": "#6e5c00",
+                    "primary": "#002068",
+                    "tertiary": "#072459",
+                    "primary-fixed-dim": "#b5c4ff",
+                    "inverse-primary": "#b5c4ff",
+                    "on-secondary-fixed-variant": "#544600",
+                    "inverse-on-surface": "#f0f1f2",
+                    "on-secondary": "#ffffff",
+                    "surface-bright": "#f8f9fa",
+                    "surface-white": "#FFFFFF",
+                    "surface-dim": "#d9dadb",
+                    "secondary-fixed-dim": "#e9c400",
+                    "on-error": "#ffffff",
+                    "background": "#f8f9fa",
+                    "on-background": "#191c1d",
+                    "secondary": "#705d00",
+                    "institutional-blue": "#003399",
+                    "border-gray": "#E6E6E6",
+                    "primary-container": "#003399",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed": "#ffe16d",
+                    "surface": "#f8f9fa",
+                    "deep-navy": "#001F54",
+                    "error": "#ba1a1a",
+                    "surface-container": "#edeeef",
+                    "tertiary-fixed": "#dae2ff",
+                    "secondary-container": "#fcd400",
+                    "surface-container-lowest": "#ffffff",
+                    "text-main": "#333333",
+                    "on-tertiary-fixed-variant": "#2e457b",
+                    "on-primary-fixed-variant": "#153ea3",
+                    "on-primary-container": "#8aa4ff",
+                    "on-tertiary-fixed": "#001946",
+                    "on-surface": "#191c1d",
+                    "inverse-surface": "#2e3132",
+                    "surface-tint": "#3557bc",
+                    "surface-container-low": "#f3f4f5",
+                    "on-secondary-fixed": "#221b00",
+                    "tertiary-container": "#233b70",
+                    "surface-container-high": "#e7e8e9",
+                    "on-surface-variant": "#444653",
+                    "on-primary-fixed": "#00164e",
+                    "outline": "#747684",
+                    "surface-variant": "#e1e3e4",
+                    "on-tertiary": "#ffffff",
+                    "accent-gold": "#FFD700",
+                    "on-error-container": "#93000a",
+                    "surface-container-highest": "#e1e3e4",
+                    "on-tertiary-container": "#90a7e3",
+                    "tertiary-fixed-dim": "#b1c5ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "utility-height": "40px",
+                    "stack-sm": "8px",
+                    "margin-desktop": "48px",
+                    "gutter": "24px",
+                    "stack-md": "16px",
+                    "stack-lg": "32px",
+                    "max-width": "1280px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "label-md": ["IBM Plex Sans"],
+                    "utility-bar": ["IBM Plex Sans"],
+                    "headline-lg-mobile": ["IBM Plex Serif"],
+                    "headline-md": ["IBM Plex Serif"],
+                    "body-md": ["IBM Plex Sans"],
+                    "label-sm": ["IBM Plex Sans"],
+                    "headline-lg": ["IBM Plex Serif"],
+                    "body-lg": ["IBM Plex Sans"],
+                    "display-lg": ["IBM Plex Serif"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "utility-bar": ["13px", {"lineHeight": "18px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .bg-pattern-subtle {
+            background-image: radial-gradient(#ffffff20 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        body { font-family: 'IBM Plex Sans', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'IBM Plex Serif', serif; }
+    </style>
+</head>
+<body class="bg-background text-text-main antialiased min-h-screen flex flex-col">
+<!-- Utility Bar -->
+<div class="bg-deep-navy text-surface-white w-full h-utility-height flex items-center px-margin-desktop z-[60]">
+<div class="max-w-max-width mx-auto w-full flex justify-between items-center text-utility-bar font-utility-bar">
+<div class="flex gap-stack-md">
+<a class="hover:underline" href="#">Brasil</a>
+<a class="hover:underline" href="#">Acesso à Informação</a>
+</div>
+<div class="flex gap-stack-md">
+<a class="hover:underline" href="#">Portal de Transparência</a>
+<a class="hover:underline" href="#">Ouvidoria</a>
+</div>
+</div>
+</div>
+<!-- Top Navigation -->
+<header class="bg-deep-navy sticky top-0 w-full z-50 shadow-sm border-b border-outline-variant">
+<div class="max-w-max-width mx-auto px-margin-desktop flex items-center justify-between h-20">
+<div class="flex items-center gap-4">
+<img alt="UFCG Logo" class="h-12 w-auto brightness-0 invert" src="https://lh3.googleusercontent.com/aida/AP1WRLu_TEyqkHL6Le6JcDn5d79t4sa9ffDhRKBfHDqjW-_5S2NkMIxLgzDGqAM1yIEaXNG5w_Xhk1FFv5ohfuA6DS1d00SgI-zr_AivhhAhde-GxJ3i92fpAzcYxpLlDwUXdyFaGd_YH5sjhUT6ye9PqMd2eNJ6IpfwFu-zxnYTz6kIp2Xj0unGm-p_IFPDatux5tCoq6i_FxaNXoA_Io8rnCmC764UVl986-GdsGY8eKumwl6hknKdurY_8r91"/>
+<div class="hidden lg:block">
+<span class="block font-headline-md text-headline-md font-bold text-surface-white leading-tight">UFCG</span>
+<span class="block font-label-sm text-label-sm text-surface-white opacity-80 uppercase tracking-wider">Pesquisa e Inovação</span>
+</div>
+</div>
+<nav class="hidden md:flex gap-6 items-center">
+<a class="text-surface-white opacity-90 hover:opacity-100 transition-opacity font-label-md text-label-md" href="#">Cursos</a>
+<a class="text-surface-white opacity-90 hover:opacity-100 transition-opacity font-label-md text-label-md" href="#">Campus</a>
+<a class="text-surface-white opacity-90 hover:opacity-100 transition-opacity font-label-md text-label-md" href="#">Ingresso</a>
+<a class="text-secondary-fixed font-bold border-b-2 border-secondary-fixed pb-1 font-label-md text-label-md" href="#">Pesquisa</a>
+<a class="text-surface-white opacity-90 hover:opacity-100 transition-opacity font-label-md text-label-md" href="#">Extensão</a>
+<a class="text-surface-white opacity-90 hover:opacity-100 transition-opacity font-label-md text-label-md" href="#">Institucional</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="bg-institutional-blue hover:bg-tertiary-container text-on-primary px-4 py-2 rounded-lg text-label-md font-label-md transition-colors">
+                    Portal do Aluno
+                </button>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Breadcrumb -->
+<div class="bg-surface-white border-b border-border-gray">
+<nav class="max-w-max-width mx-auto px-margin-desktop py-4 flex items-center gap-2 text-label-sm font-label-sm">
+<a class="text-institutional-blue hover:underline" href="#">Início</a>
+<span class="text-on-surface-variant">/</span>
+<span class="text-text-main font-semibold">Pesquisa e Inovação</span>
+</nav>
+</div>
+<!-- Hero Section -->
+<section class="relative bg-institutional-blue overflow-hidden py-24">
+<div class="absolute right-0 top-0 w-1/3 h-full opacity-10 pointer-events-none bg-pattern-subtle"></div>
+<div class="max-w-max-width mx-auto px-margin-desktop relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+<div>
+<h1 class="font-display-lg text-display-lg text-on-primary mb-stack-md leading-tight">
+                        Pesquisa e Inovação
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-primary opacity-90 mb-stack-lg max-w-xl">
+                        Conhecimento científico, desenvolvimento tecnológico e inovação a serviço da sociedade. Liderando a fronteira acadêmica no Nordeste Brasileiro.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-surface-white text-institutional-blue px-6 py-3 rounded-lg font-label-md text-label-md font-bold hover:bg-surface-container transition-colors">
+                            Conheça os projetos
+                        </button>
+<button class="border border-surface-white text-on-primary px-6 py-3 rounded-lg font-label-md text-label-md font-bold hover:bg-surface-white/10 transition-colors">
+                            Iniciação Científica
+                        </button>
+<button class="border border-surface-white text-on-primary px-6 py-3 rounded-lg font-label-md text-label-md font-bold hover:bg-surface-white/10 transition-colors">
+                            Editais de Pesquisa
+                        </button>
+</div>
+</div>
+<div class="hidden lg:block">
+<div class="bg-surface-white/5 border border-surface-white/20 p-8 rounded-xl backdrop-blur-sm">
+<div class="flex items-center gap-4 mb-6">
+<span class="material-symbols-outlined text-4xl text-accent-gold" style="font-variation-settings: 'FILL' 1;">science</span>
+<h3 class="font-headline-md text-headline-md text-on-primary">Excelência em C&amp;T</h3>
+</div>
+<p class="text-on-primary/80 font-body-md text-body-md mb-6 italic">
+                            "A pesquisa na UFCG é o motor que impulsiona o desenvolvimento do Polo Tecnológico de Campina Grande e transforma realidades regionais."
+                        </p>
+<div class="h-[2px] bg-accent-gold w-16 mb-4"></div>
+<span class="text-on-primary font-bold">Coordenação de Pesquisa</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Pesquisa na UFCG Section -->
+<section class="py-24 bg-surface-bright">
+<div class="max-w-max-width mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-deep-navy mb-stack-sm">Pesquisa na UFCG</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
+                        Integramos a formação acadêmica à prática científica para gerar soluções inovadoras e formar pesquisadores de alto nível para o mercado e academia.
+                    </p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Cards -->
+<div class="bg-surface-white p-8 border border-border-gray rounded-lg shadow-sm hover:shadow-md transition-shadow group">
+<span class="material-symbols-outlined text-institutional-blue text-4xl mb-4 group-hover:scale-110 transition-transform">article</span>
+<h4 class="font-headline-md text-headline-md text-deep-navy mb-2">Produção científica</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Publicações em periódicos de alto impacto, livros e anais de eventos científicos nacionais e internacionais.</p>
+</div>
+<div class="bg-surface-white p-8 border border-border-gray rounded-lg shadow-sm hover:shadow-md transition-shadow group">
+<span class="material-symbols-outlined text-institutional-blue text-4xl mb-4 group-hover:scale-110 transition-transform">lightbulb</span>
+<h4 class="font-headline-md text-headline-md text-deep-navy mb-2">Projetos de pesquisa</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Iniciativas estruturadas que buscam responder a problemas complexos da ciência e tecnologia contemporânea.</p>
+</div>
+<div class="bg-surface-white p-8 border border-border-gray rounded-lg shadow-sm hover:shadow-md transition-shadow group">
+<span class="material-symbols-outlined text-institutional-blue text-4xl mb-4 group-hover:scale-110 transition-transform">groups</span>
+<h4 class="font-headline-md text-headline-md text-deep-navy mb-2">Grupos de pesquisa</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Comunidades de pesquisadores certificados pelo CNPq focadas em linhas de investigação específicas.</p>
+</div>
+<div class="bg-surface-white p-8 border border-border-gray rounded-lg shadow-sm hover:shadow-md transition-shadow group">
+<span class="material-symbols-outlined text-institutional-blue text-4xl mb-4 group-hover:scale-110 transition-transform">biotech</span>
+<h4 class="font-headline-md text-headline-md text-deep-navy mb-2">Laboratórios</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Infraestrutura física de ponta distribuída nos diversos campi para suporte a experimentação e testes.</p>
+</div>
+<div class="bg-surface-white p-8 border border-border-gray rounded-lg shadow-sm hover:shadow-md transition-shadow group">
+<span class="material-symbols-outlined text-institutional-blue text-4xl mb-4 group-hover:scale-110 transition-transform">school</span>
+<h4 class="font-headline-md text-headline-md text-deep-navy mb-2">Iniciação científica</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">O portal de entrada dos estudantes na vida acadêmica sob a orientação de docentes experientes.</p>
+</div>
+<div class="bg-surface-white p-8 border border-border-gray rounded-lg shadow-sm hover:shadow-md transition-shadow group">
+<span class="material-symbols-outlined text-institutional-blue text-4xl mb-4 group-hover:scale-110 transition-transform">handshake</span>
+<h4 class="font-headline-md text-headline-md text-deep-navy mb-2">Parcerias</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Cooperação técnica com outras universidades, governos e setor privado para fomento à inovação.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Áreas de Pesquisa Section -->
+<section class="py-24 bg-surface-white">
+<div class="max-w-max-width mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-deep-navy mb-stack-sm">Áreas de Pesquisa</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+                            A interdisciplinaridade é a nossa força. Explore as grandes áreas do conhecimento em que a UFCG atua.
+                        </p>
+</div>
+<a class="text-institutional-blue font-bold flex items-center gap-2 hover:underline" href="#">
+                        Todas as áreas <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Area Card -->
+<div class="border border-border-gray rounded-lg p-6 flex flex-col justify-between hover:border-institutional-blue transition-colors">
+<div>
+<div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-institutional-blue">precision_manufacturing</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-deep-navy mb-2">Engenharias e Tecnologia</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Polo de excelência em engenharia elétrica, computação e materiais.</p>
+</div>
+<button class="text-institutional-blue font-bold text-label-md flex items-center gap-1 hover:gap-2 transition-all">
+                            Ver área <span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+<div class="border border-border-gray rounded-lg p-6 flex flex-col justify-between hover:border-institutional-blue transition-colors">
+<div>
+<div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-institutional-blue">calculate</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-deep-navy mb-2">Ciências Exatas</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Fundamentos matemáticos e físicos que sustentam a inovação tecnológica.</p>
+</div>
+<button class="text-institutional-blue font-bold text-label-md flex items-center gap-1 hover:gap-2 transition-all">
+                            Ver área <span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+<div class="border border-border-gray rounded-lg p-6 flex flex-col justify-between hover:border-institutional-blue transition-colors">
+<div>
+<div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-institutional-blue">health_and_safety</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-deep-navy mb-2">Saúde</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Pesquisas aplicadas ao bem-estar social e avanços na área médica.</p>
+</div>
+<button class="text-institutional-blue font-bold text-label-md flex items-center gap-1 hover:gap-2 transition-all">
+                            Ver área <span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+<div class="border border-border-gray rounded-lg p-6 flex flex-col justify-between hover:border-institutional-blue transition-colors">
+<div>
+<div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-institutional-blue">psychology</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-deep-navy mb-2">Humanas</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Estudos sobre sociedade, educação, política e comportamento humano.</p>
+</div>
+<button class="text-institutional-blue font-bold text-label-md flex items-center gap-1 hover:gap-2 transition-all">
+                            Ver área <span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+<div class="border border-border-gray rounded-lg p-6 flex flex-col justify-between hover:border-institutional-blue transition-colors">
+<div>
+<div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-institutional-blue">agriculture</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-deep-navy mb-2">Agrárias</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Inovações para o campo e desenvolvimento sustentável no Semiárido.</p>
+</div>
+<button class="text-institutional-blue font-bold text-label-md flex items-center gap-1 hover:gap-2 transition-all">
+                            Ver área <span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+<div class="border border-border-gray rounded-lg p-6 flex flex-col justify-between hover:border-institutional-blue transition-colors">
+<div>
+<div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-institutional-blue">palette</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-deep-navy mb-2">Linguagens e Artes</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Exploração cultural e acadêmica da expressão artística e comunicação.</p>
+</div>
+<button class="text-institutional-blue font-bold text-label-md flex items-center gap-1 hover:gap-2 transition-all">
+                            Ver área <span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Inovação e Tecnologia Highlight -->
+<section class="py-24 bg-deep-navy text-on-primary">
+<div class="max-w-max-width mx-auto px-margin-desktop">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div class="aspect-video bg-cover bg-center rounded-xl shadow-2xl relative overflow-hidden" data-alt="A professional photograph of a modern university research lab focusing on technology and innovation. High-tech equipment, glowing blue lights on computer screens, and researchers wearing white lab coats collaborating in a bright, clean, minimalist space. The aesthetic is futuristic yet grounded in academic rigor, with a professional light-mode institutional feel." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAZbqS360g-9hfUjIVJrBrrcgF7hQ3C1PsXLwBwTA27Ev6JO23ySlROKZnbVaPs9wpuQ-3SZi0kMO671bf1ACaGX1wkWS66L86NYuhZCY8VdnPG2t0yZUBftcNGjaNH9bqZ7ZdqtBcOmTQaYlYqHVstWG5TK4KqZNZMGWDlyvRGOazpG_zZqVNnMbqEd0RBiaBVhf4QYaRIRkMnUpMLFCE6O5cVzKRa91jMZeaJ_iQMgsW4tKuL59MryZMnU7zOWN6VGqB4_0wUQbI2')">
+<div class="absolute inset-0 bg-institutional-blue/20"></div>
+</div>
+<div>
+<span class="text-accent-gold font-bold uppercase tracking-widest text-label-sm mb-4 block">Fomento Tecnológico</span>
+<h2 class="font-headline-lg text-headline-lg mb-stack-md">Inovação e Tecnologia</h2>
+<p class="font-body-lg text-body-lg opacity-90 mb-8">
+                            A UFCG atua como ponte entre o conhecimento acadêmico e o mercado, acelerando a transformação de ideias em produtos e serviços.
+                        </p>
+<div class="grid sm:grid-cols-2 gap-6">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-accent-gold">rocket_launch</span>
+<div>
+<h4 class="font-bold mb-1">Incubação</h4>
+<p class="text-label-sm opacity-80">Suporte a startups e novos negócios de base tecnológica.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-accent-gold">swap_horiz</span>
+<div>
+<h4 class="font-bold mb-1">Transferência</h4>
+<p class="text-label-sm opacity-80">Licenciamento de tecnologias desenvolvidas na universidade.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-accent-gold">gavel</span>
+<div>
+<h4 class="font-bold mb-1">Propriedade</h4>
+<p class="text-label-sm opacity-80">Gestão de patentes, registros de software e marcas.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-accent-gold">business</span>
+<div>
+<h4 class="font-bold mb-1">Parcerias</h4>
+<p class="text-label-sm opacity-80">Convênios de PD&amp;I com empresas nacionais e globais.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Iniciação Científica Section -->
+<section class="py-24 bg-surface-bright">
+<div class="max-w-max-width mx-auto px-margin-desktop text-center">
+<h2 class="font-headline-lg text-headline-lg text-deep-navy mb-4">Iniciação Científica</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto mb-12">
+                    Programas dedicados a inserir o estudante de graduação no universo da pesquisa, preparando-os para os desafios da pós-graduação e do mercado.
+                </p>
+<div class="grid md:grid-cols-4 gap-gutter">
+<div class="bg-surface-white p-6 border border-border-gray rounded-lg">
+<div class="w-10 h-10 bg-institutional-blue text-on-primary rounded-full flex items-center justify-center mx-auto mb-4 font-bold">1</div>
+<h4 class="font-bold text-deep-navy mb-2">PIBIC</h4>
+<p class="text-label-sm text-on-surface-variant">Programa Institucional de Bolsas de Iniciação Científica.</p>
+</div>
+<div class="bg-surface-white p-6 border border-border-gray rounded-lg">
+<div class="w-10 h-10 bg-institutional-blue text-on-primary rounded-full flex items-center justify-center mx-auto mb-4 font-bold">2</div>
+<h4 class="font-bold text-deep-navy mb-2">PIBITI</h4>
+<p class="text-label-sm text-on-surface-variant">Programa voltado ao Desenvolvimento Tecnológico e Inovação.</p>
+</div>
+<div class="bg-surface-white p-6 border border-border-gray rounded-lg">
+<div class="w-10 h-10 bg-institutional-blue text-on-primary rounded-full flex items-center justify-center mx-auto mb-4 font-bold">3</div>
+<h4 class="font-bold text-deep-navy mb-2">Voluntariado</h4>
+<p class="text-label-sm text-on-surface-variant">Experiência em pesquisa para alunos sem vínculo de bolsa remunerada.</p>
+</div>
+<div class="bg-surface-white p-6 border border-border-gray rounded-lg">
+<div class="w-10 h-10 bg-institutional-blue text-on-primary rounded-full flex items-center justify-center mx-auto mb-4 font-bold">4</div>
+<h4 class="font-bold text-deep-navy mb-2">Bolsas</h4>
+<p class="text-label-sm text-on-surface-variant">Recursos provenientes do CNPq, FAPESQ e do tesouro da UFCG.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Editais e Oportunidades Table -->
+<section class="py-24 bg-surface-white">
+<div class="max-w-max-width mx-auto px-margin-desktop">
+<div class="flex items-center justify-between mb-8">
+<h2 class="font-headline-lg text-headline-lg text-deep-navy">Editais e Oportunidades</h2>
+<button class="bg-institutional-blue text-on-primary px-4 py-2 rounded font-label-md text-label-md">Ver arquivo completo</button>
+</div>
+<div class="overflow-x-auto border border-border-gray rounded-lg">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-deep-navy text-on-primary font-label-md text-label-md">
+<th class="p-4">Data</th>
+<th class="p-4">Categoria</th>
+<th class="p-4">Título do Edital</th>
+<th class="p-4">Status</th>
+<th class="p-4 text-center">Ações</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md">
+<tr class="border-b border-border-gray hover:bg-surface-bright transition-colors">
+<td class="p-4 text-on-surface-variant">15/05/2024</td>
+<td class="p-4"><span class="bg-surface-container-high px-2 py-1 rounded text-xs font-bold text-deep-navy">PESQUISA</span></td>
+<td class="p-4 font-medium">PIBIC 2024-2025: Seleção de Projetos</td>
+<td class="p-4"><span class="text-green-600 font-bold flex items-center gap-1"><span class="w-2 h-2 bg-green-600 rounded-full"></span> Inscrições Abertas</span></td>
+<td class="p-4 text-center"><button class="text-institutional-blue font-bold hover:underline">Acessar</button></td>
+</tr>
+<tr class="bg-surface-container-low border-b border-border-gray hover:bg-surface-bright transition-colors">
+<td class="p-4 text-on-surface-variant">10/05/2024</td>
+<td class="p-4"><span class="bg-surface-container-high px-2 py-1 rounded text-xs font-bold text-deep-navy">INOVAÇÃO</span></td>
+<td class="p-4 font-medium">Chamada de Transferência Tecnológica - ICT-Empresa</td>
+<td class="p-4"><span class="text-green-600 font-bold flex items-center gap-1"><span class="w-2 h-2 bg-green-600 rounded-full"></span> Inscrições Abertas</span></td>
+<td class="p-4 text-center"><button class="text-institutional-blue font-bold hover:underline">Acessar</button></td>
+</tr>
+<tr class="border-b border-border-gray hover:bg-surface-bright transition-colors">
+<td class="p-4 text-on-surface-variant">02/05/2024</td>
+<td class="p-4"><span class="bg-surface-container-high px-2 py-1 rounded text-xs font-bold text-deep-navy">INTERCÂMBIO</span></td>
+<td class="p-4 font-medium">Doutorado Sanduíche - Programa PRINT UFCG</td>
+<td class="p-4"><span class="text-error font-bold flex items-center gap-1"><span class="w-2 h-2 bg-error rounded-full"></span> Encerrado</span></td>
+<td class="p-4 text-center"><button class="text-institutional-blue font-bold hover:underline">Acessar</button></td>
+</tr>
+<tr class="bg-surface-container-low border-b border-border-gray hover:bg-surface-bright transition-colors">
+<td class="p-4 text-on-surface-variant">28/04/2024</td>
+<td class="p-4"><span class="bg-surface-container-high px-2 py-1 rounded text-xs font-bold text-deep-navy">EVENTOS</span></td>
+<td class="p-4 font-medium">Congresso de Iniciação Científica - Cadastro de Avaliadores</td>
+<td class="p-4"><span class="text-institutional-blue font-bold flex items-center gap-1"><span class="w-2 h-2 bg-institutional-blue rounded-full"></span> Aguardando</span></td>
+<td class="p-4 text-center"><button class="text-institutional-blue font-bold hover:underline">Acessar</button></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- Pesquisa em Números -->
+<section class="py-24 bg-deep-navy">
+<div class="max-w-max-width mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-primary">Pesquisa em Números</h2>
+<p class="text-on-primary opacity-80 font-body-md text-body-md">Impacto e abrangência da nossa rede de conhecimento.</p>
+</div>
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="text-center p-8 bg-surface-white/5 border border-surface-white/10 rounded-lg">
+<div class="text-4xl lg:text-5xl font-bold text-accent-gold mb-2">1.200+</div>
+<div class="text-surface-white font-label-md text-label-md uppercase tracking-widest opacity-80">Projetos Ativos</div>
+</div>
+<div class="text-center p-8 bg-surface-white/5 border border-surface-white/10 rounded-lg">
+<div class="text-4xl lg:text-5xl font-bold text-accent-gold mb-2">245</div>
+<div class="text-surface-white font-label-md text-label-md uppercase tracking-widest opacity-80">Grupos CNPq</div>
+</div>
+<div class="text-center p-8 bg-surface-white/5 border border-surface-white/10 rounded-lg">
+<div class="text-4xl lg:text-5xl font-bold text-accent-gold mb-2">850</div>
+<div class="text-surface-white font-label-md text-label-md uppercase tracking-widest opacity-80">Bolsas PIBIC</div>
+</div>
+<div class="text-center p-8 bg-surface-white/5 border border-surface-white/10 rounded-lg">
+<div class="text-4xl lg:text-5xl font-bold text-accent-gold mb-2">132</div>
+<div class="text-surface-white font-label-md text-label-md uppercase tracking-widest opacity-80">Laboratórios</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-24 bg-surface-white border-t border-border-gray">
+<div class="max-w-max-width mx-auto px-margin-desktop text-center">
+<div class="mb-8">
+<span class="material-symbols-outlined text-6xl text-institutional-blue mb-4">auto_awesome</span>
+<h2 class="font-headline-lg text-headline-lg text-deep-navy">Transformando conhecimento em impacto</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                        Seja você aluno, professor ou parceiro externo, há um lugar para sua inovação na UFCG.
+                    </p>
+</div>
+<div class="flex flex-wrap justify-center gap-4">
+<button class="bg-institutional-blue text-on-primary px-8 py-4 rounded-lg font-bold hover:bg-deep-navy transition-colors">
+                        Ver editais abertos
+                    </button>
+<button class="border-2 border-institutional-blue text-institutional-blue px-8 py-4 rounded-lg font-bold hover:bg-surface-container transition-colors">
+                        Conhecer grupos de pesquisa
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-deep-navy text-surface-white w-full py-stack-lg border-t border-outline-variant">
+<div class="max-w-max-width mx-auto px-margin-desktop">
+<div class="grid md:grid-cols-4 gap-gutter mb-12">
+<div class="col-span-1">
+<img alt="UFCG Footer Logo" class="h-10 mb-6 brightness-0 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgfVUhKRg2wdQMsWKnJXvFzAtbXhMAZthnhhWLzXd3Gnr4C-RFvAwVytZAgWnVlnRwV9OIGuOLoqwCLLDKMt4JXNaDpLzsgPPmgs5QDRUppxHZvNM4mw5FAwSI4lzVZclc9vFAlCZNbNqfUdZmy18h4p1cqdXkuRSWFL1usYJVDF-ewRKbFzBhJzVilkY_Au0Wny5lzMQWJTTG7yILessrvwAIAWfOTTDFkg171J0JOxYu4OsS8xwc_riEY7h47fVuxYvcAt-QraFp"/>
+<p class="font-body-md text-body-md opacity-80 mb-4">
+                        Universidade Federal de Campina Grande<br/>
+                        Av. Aprígio Veloso, 882 - Bodocongó<br/>
+                        Campina Grande - PB
+                    </p>
+</div>
+<div>
+<h5 class="font-bold mb-4 uppercase text-label-sm tracking-wider">Acesso Rápido</h5>
+<ul class="flex flex-col gap-2 font-label-sm text-label-sm opacity-80">
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Portal do Aluno</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Portal do Servidor</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Calendário Acadêmico</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Processos Seletivos</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-4 uppercase text-label-sm tracking-wider">Pesquisa</h5>
+<ul class="flex flex-col gap-2 font-label-sm text-label-sm opacity-80">
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Editais de Iniciação</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Pós-Graduação</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Repositório Institucional</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">NIT - Núcleo de Inovação</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-4 uppercase text-label-sm tracking-wider">Contato</h5>
+<ul class="flex flex-col gap-2 font-label-sm text-label-sm opacity-80">
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Assessoria de Imprensa</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Fale Conosco</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Ouvidoria Geral</a></li>
+<li class="flex gap-4 mt-4">
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary-fixed transition-colors">public</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary-fixed transition-colors">share</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary-fixed transition-colors">mail</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-label-sm text-label-sm opacity-70">
+                    © 2024 Universidade Federal de Campina Grande - Todos os direitos reservados.
+                </p>
+<div class="flex gap-stack-md font-label-sm text-label-sm opacity-70">
+<a class="hover:underline" href="#">Transparência</a>
+<a class="hover:underline" href="#">Privacidade</a>
+<a class="hover:underline" href="#">Mapa do Site</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for cards
+        document.querySelectorAll('.group').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.classList.add('shadow-md');
+            });
+            card.addEventListener('mouseleave', () => {
+                card.classList.remove('shadow-md');
+            });
+        });
+    </script>
+</body></html>

@@ -5,12 +5,12 @@ const utilityLinks = ['Acesso à Informação', 'Transparência', 'Ouvidoria', '
 const navLinks = [
   { label: 'A UFCG', href: '/' },
   { label: 'Cursos', href: '/cursos' },
-  { label: 'Pesquisa e Inovação', href: '#' },
-  { label: 'Extensão', href: '#' },
-  { label: 'Assistência Estudantil', href: '#' },
-  { label: 'Campi', href: '#' },
-  { label: 'Editais', href: '#' },
-  { label: 'Notícias', href: '#' },
+  { label: 'Pesquisa e Inovação', href: '/pesquisa-e-inovacao' },
+  { label: 'Extensão', href: '/extensao' },
+  { label: 'Assistência Estudantil', href: '/assistencia-estudantil' },
+  { label: 'Campi', href: '/campi' },
+  { label: 'Editais', href: '/editais' },
+  { label: 'Notícias', href: '/noticias' },
 ]
 
 function Navbar() {
