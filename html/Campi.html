@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Campi - UFCG</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Serif:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed": "#001946",
+                      "primary-container": "#003399",
+                      "error": "#ba1a1a",
+                      "tertiary-fixed-dim": "#b1c5ff",
+                      "on-secondary": "#ffffff",
+                      "surface-tint": "#3557bc",
+                      "surface-dim": "#d9dadb",
+                      "outline-variant": "#c4c5d5",
+                      "institutional-blue": "#003399",
+                      "surface": "#f8f9fa",
+                      "on-tertiary-container": "#90a7e3",
+                      "deep-navy": "#001F54",
+                      "tertiary-container": "#233b70",
+                      "on-primary-fixed": "#00164e",
+                      "on-background": "#191c1d",
+                      "on-error-container": "#93000a",
+                      "on-surface-variant": "#444653",
+                      "on-secondary-fixed-variant": "#544600",
+                      "on-secondary-container": "#6e5c00",
+                      "surface-bright": "#f8f9fa",
+                      "text-main": "#333333",
+                      "tertiary-fixed": "#dae2ff",
+                      "outline": "#747684",
+                      "inverse-on-surface": "#f0f1f2",
+                      "secondary-fixed": "#ffe16d",
+                      "on-surface": "#191c1d",
+                      "inverse-surface": "#2e3132",
+                      "error-container": "#ffdad6",
+                      "accent-gold": "#FFD700",
+                      "surface-container-highest": "#e1e3e4",
+                      "secondary-fixed-dim": "#e9c400",
+                      "secondary-container": "#fcd400",
+                      "surface-white": "#FFFFFF",
+                      "inverse-primary": "#b5c4ff",
+                      "primary-fixed-dim": "#b5c4ff",
+                      "primary-fixed": "#dce1ff",
+                      "background": "#f8f9fa",
+                      "surface-variant": "#e1e3e4",
+                      "on-secondary-fixed": "#221b00",
+                      "tertiary": "#072459",
+                      "on-tertiary-fixed-variant": "#2e457b",
+                      "surface-container": "#edeeef",
+                      "surface-container-lowest": "#ffffff",
+                      "primary": "#002068",
+                      "on-primary-container": "#8aa4ff",
+                      "surface-container-high": "#e7e8e9",
+                      "on-tertiary": "#ffffff",
+                      "surface-container-low": "#f3f4f5",
+                      "secondary": "#705d00",
+                      "on-error": "#ffffff",
+                      "border-gray": "#E6E6E6",
+                      "on-primary-fixed-variant": "#153ea3",
+                      "on-primary": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "stack-md": "16px",
+                      "margin-mobile": "16px",
+                      "gutter": "24px",
+                      "utility-height": "40px",
+                      "max-width": "1280px",
+                      "margin-desktop": "48px",
+                      "stack-sm": "8px",
+                      "stack-lg": "32px"
+              },
+              "fontFamily": {
+                      "headline-md": [
+                              "IBM Plex Serif"
+                      ],
+                      "headline-lg": [
+                              "IBM Plex Serif"
+                      ],
+                      "label-sm": [
+                              "IBM Plex Sans"
+                      ],
+                      "label-md": [
+                              "IBM Plex Sans"
+                      ],
+                      "body-md": [
+                              "IBM Plex Sans"
+                      ],
+                      "headline-lg-mobile": [
+                              "IBM Plex Serif"
+                      ],
+                      "body-lg": [
+                              "IBM Plex Sans"
+                      ],
+                      "utility-bar": [
+                              "IBM Plex Sans"
+                      ],
+                      "display-lg": [
+                              "IBM Plex Serif"
+                      ]
+              },
+              "fontSize": {
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.03em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "utility-bar": [
+                              "13px",
+                              {
+                                      "lineHeight": "18px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        body { background-color: #f8f9fa; color: #333333; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bento-card {
+            background-color: #ffffff;
+            border: 1px solid #E6E6E6;
+            border-radius: 0.25rem;
+            transition: box-shadow 0.2s ease-in-out;
+        }
+        .bento-card:hover {
+            box-shadow: 0px 4px 12px rgba(0, 31, 84, 0.08);
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md antialiased min-h-screen flex flex-col">
+<!-- Utility Bar -->
+<div class="bg-deep-navy text-surface-white h-utility-height flex items-center w-full px-margin-mobile md:px-margin-desktop fixed top-0 z-50">
+<div class="w-full max-w-max-width mx-auto flex justify-between items-center text-utility-bar font-utility-bar">
+<div class="flex items-center gap-4">
+<a class="hover:underline flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">language</span>
+                    Brasil
+                </a>
+</div>
+<div class="flex items-center gap-4">
+<a class="hover:underline" href="#">Acesso à Informação</a>
+<a class="hover:underline" href="#">Participe</a>
+<a class="hover:underline" href="#">Legislação</a>
+</div>
+</div>
+</div>
+<!-- TopAppBar -->
+<header class="bg-surface-white border-b border-border-gray shadow-sm flex flex-col w-full px-margin-mobile md:px-margin-desktop mt-utility-height sticky top-utility-height z-40">
+<div class="w-full max-w-max-width mx-auto py-4">
+<div class="flex justify-between items-center">
+<a class="flex items-center gap-4" href="#">
+<img alt="UFCG Logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLu_TEyqkHL6Le6JcDn5d79t4sa9ffDhRKBfHDqjW-_5S2NkMIxLgzDGqAM1yIEaXNG5w_Xhk1FFv5ohfuA6DS1d00SgI-zr_AivhhAhde-GxJ3i92fpAzcYxpLlDwUXdyFaGd_YH5sjhUT6ye9PqMd2eNJ6IpfwFu-zxnYTz6kIp2Xj0unGm-p_IFPDatux5tCoq6i_FxaNXoA_Io8rnCmC764UVl986-GdsGY8eKumwl6hknKdurY_8r91"/>
+</a>
+<div class="flex items-center gap-4">
+<div class="relative hidden md:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="pl-10 pr-4 py-2 border border-border-gray rounded-DEFAULT bg-surface-white focus:border-institutional-blue focus:ring-1 focus:ring-institutional-blue outline-none text-body-md font-body-md w-64 transition-colors" placeholder="Buscar na UFCG" type="text"/>
+</div>
+<button class="bg-institutional-blue text-surface-white px-4 py-2 rounded-lg font-label-md text-label-md hover:bg-deep-navy transition-colors flex items-center gap-2">
+<span>Acesso à Informação</span>
+</button>
+</div>
+</div>
+<nav class="mt-4 hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-institutional-blue font-label-md text-label-md py-2 border-b-2 border-transparent transition-colors" href="#">Institucional</a>
+<a class="text-on-surface-variant hover:text-institutional-blue font-label-md text-label-md py-2 border-b-2 border-transparent transition-colors" href="#">Ensino</a>
+<a class="text-on-surface-variant hover:text-institutional-blue font-label-md text-label-md py-2 border-b-2 border-transparent transition-colors" href="#">Pesquisa</a>
+<a class="text-on-surface-variant hover:text-institutional-blue font-label-md text-label-md py-2 border-b-2 border-transparent transition-colors" href="#">Extensão</a>
+<a class="text-on-surface-variant hover:text-institutional-blue font-label-md text-label-md py-2 border-b-2 border-transparent transition-colors" href="#">Estudantes</a>
+<a class="text-on-surface-variant hover:text-institutional-blue font-label-md text-label-md py-2 border-b-2 border-transparent transition-colors" href="#">Servidores</a>
+<a class="text-institutional-blue font-semibold font-label-md text-label-md py-2 border-b-2 border-institutional-blue" href="#">Campi</a>
+</nav>
+</div>
+</header>
+<main class="flex-grow w-full max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-8 flex flex-col gap-12">
+<!-- Breadcrumbs -->
+<nav class="flex items-center gap-2 text-label-sm font-label-sm">
+<a class="text-institutional-blue hover:underline" href="#">Início</a>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<span class="text-text-main">Campi</span>
+</nav>
+<!-- Hero Section -->
+<section class="bg-deep-navy rounded-xl overflow-hidden relative text-surface-white">
+<div class="absolute inset-0 z-0 opacity-20">
+<img class="w-full h-full object-cover" data-alt="A subtle, abstract geometric pattern representing connectivity and academic network across different locations. Rendered in deep navy and subtle gold accents. High quality, professional aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBu30fAlIosvIOMfF83zKiHy08wJKgniIBGxpdbnYPDNtENeXWxkzmTZGJoYAiGuxFO7FrDiZKtlGzBsg2_TuB-NqWtBm_OEigfOt4hStvI8iDtfl-nZb17zAqK4z7gaEVBW_6icEMN565iSx7B0pC-NTA0lDK1jHjOXuuw6e76Qz-bv5XG5c15qAJLIJWJylqT3HBMuPjpawsD54zVicvDOXyL7JCuVwnvKDarVGPaolytQVfn5Uis6pCkWz7K2Kkn5QBp7soMcbnp"/>
+</div>
+<div class="relative z-10 grid md:grid-cols-2 gap-8 p-8 md:p-12 items-center">
+<div class="flex flex-col gap-6">
+<h1 class="font-display-lg text-display-lg text-surface-white">Campi da UFCG</h1>
+<p class="font-body-lg text-body-lg text-surface-variant">Uma universidade multicampi presente em diferentes regiões da Paraíba.</p>
+<p class="font-body-md text-body-md text-outline-variant max-w-xl">A UFCG atua em 7 campi, fortalecendo o ensino, a pesquisa, a extensão e o desenvolvimento regional por meio de unidades acadêmicas distribuídas pelo estado.</p>
+<div class="flex flex-wrap gap-4 mt-2">
+<button class="bg-institutional-blue text-surface-white px-6 py-3 rounded-lg font-label-md text-label-md hover:bg-primary transition-colors">Conheça os campi</button>
+<button class="bg-surface-white text-institutional-blue border border-surface-white px-6 py-3 rounded-lg font-label-md text-label-md hover:bg-surface transition-colors">Cursos por campus</button>
+<button class="bg-transparent text-surface-white border border-outline-variant px-6 py-3 rounded-lg font-label-md text-label-md hover:bg-tertiary-container transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined">map</span>
+                            Ver localização
+                        </button>
+</div>
+</div>
+<div class="hidden md:block h-64 rounded-lg overflow-hidden border border-outline-variant/30">
+<img class="w-full h-full object-cover" data-alt="A sweeping aerial photograph of a modern university campus during golden hour. Academic buildings with brutalist and contemporary architecture, surrounded by green landscaping and walkways where students are walking. Professional, clear, vibrant, educational setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBB3w6hG4x81G87FF_BczU_DPHlDAeXoqbS5QHaB19M0OTn1Mao8twLS7CBtaKyA8lfJBetoY8KSercnO2byyLl1HoQ8alcM867-w-GudBOelVhxlGoDFcRbTQm5brGX8JICrWK_47gL4hCOH3IMyY7K1YzM_DMuQSzoTYDdNv_WACqabhO5JQFf-NKS8PXbmqHnp9cWiP2iYzZc25Qp5Se1V6EaqX_yM9qtSWCcJ8eC4mPmTKnKkCp4ay1dtQNdc3vNhrHiMkQOZDg"/>
+</div>
+</div>
+</section>
+<!-- Presença Regional -->
+<section class="flex flex-col gap-8">
+<div class="border-b border-border-gray pb-4">
+<h2 class="font-headline-lg text-headline-lg text-deep-navy">Presença regional e desenvolvimento</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-3xl">A estrutura multicampi da UFCG é um pilar estratégico para a democratização do ensino superior e o impulsionamento socioeconômico do interior da Paraíba.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Feature Cards -->
+<div class="bento-card p-6 flex flex-col gap-4">
+<div class="w-12 h-12 bg-surface-container flex items-center justify-center rounded-lg text-institutional-blue">
+<span class="material-symbols-outlined filled">school</span>
+</div>
+<h3 class="font-label-md text-label-md text-deep-navy">Ensino público de excelência</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Acesso a educação de qualidade em diversas áreas do conhecimento para estudantes de toda a região.</p>
+</div>
+<div class="bento-card p-6 flex flex-col gap-4">
+<div class="w-12 h-12 bg-surface-container flex items-center justify-center rounded-lg text-institutional-blue">
+<span class="material-symbols-outlined filled">public</span>
+</div>
+<h3 class="font-label-md text-label-md text-deep-navy">Desenvolvimento regional</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Projetos que dialogam diretamente com as vocações e necessidades econômicas de cada polo regional.</p>
+</div>
+<div class="bento-card p-6 flex flex-col gap-4">
+<div class="w-12 h-12 bg-surface-container flex items-center justify-center rounded-lg text-institutional-blue">
+<span class="material-symbols-outlined filled">biotech</span>
+</div>
+<h3 class="font-label-md text-label-md text-deep-navy">Pesquisa e inovação</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Laboratórios e centros de pesquisa avançada contribuindo para o ecossistema de inovação nacional.</p>
+</div>
+<div class="bento-card p-6 flex flex-col gap-4">
+<div class="w-12 h-12 bg-surface-container flex items-center justify-center rounded-lg text-institutional-blue">
+<span class="material-symbols-outlined filled">groups</span>
+</div>
+<h3 class="font-label-md text-label-md text-deep-navy">Extensão universitária</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Ações contínuas de integração com a comunidade local, prestando serviços e trocando saberes.</p>
+</div>
+<div class="bento-card p-6 flex flex-col gap-4">
+<div class="w-12 h-12 bg-surface-container flex items-center justify-center rounded-lg text-institutional-blue">
+<span class="material-symbols-outlined filled">work</span>
+</div>
+<h3 class="font-label-md text-label-md text-deep-navy">Formação profissional</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Capacitação de profissionais qualificados para atender às demandas do mercado de trabalho regional.</p>
+</div>
+<div class="bento-card p-6 flex flex-col gap-4">
+<div class="w-12 h-12 bg-surface-container flex items-center justify-center rounded-lg text-institutional-blue">
+<span class="material-symbols-outlined filled">hub</span>
+</div>
+<h3 class="font-label-md text-label-md text-deep-navy">Integração acadêmica</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Rede conectada de saberes que permite mobilidade e intercâmbio entre os diferentes campi.</p>
+</div>
+</div>
+</section>
+<!-- Nossos Campi Grid -->
+<section class="flex flex-col gap-8">
+<div class="border-b border-border-gray pb-4">
+<h2 class="font-headline-lg text-headline-lg text-deep-navy">Nossos campi</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="bento-card overflow-hidden flex flex-col">
+<div class="h-48 bg-surface-container relative">
+<img class="w-full h-full object-cover" data-alt="A bright, clear photograph of the main administration building at a federal university campus in Brazil. Modernist concrete architecture, clear blue sky, green trees around. Professional academic aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxhtmLx_H5UFyGTCadZZC0Y66i5QD12cC5SsERRp-dhuEbrE8lhAS0n_sbY9ZlO7A42ItfmpvwyhMngapI4jr5-rZSiTc7OVXhcCSqiPaKLdm1B6kQ-30raz9IQsNoaHkXxFAoYyULcL9ztsSgQgaAA1JYK60pwSLpzIU6FqfF2h0ADhzTG1wOqSw_49SZTBBb13Zo9R_SSGapmrw09R5TUp4sEqYmMwARXi1axWnpn9sAwkBy-E-wKbrnROvkbApLTdJYBQQCmpix"/>
+<div class="absolute top-4 left-4 bg-institutional-blue text-surface-white px-3 py-1 rounded-full text-xs font-semibold font-label-sm">Campus Sede</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-deep-navy mb-1">Campina Grande</h3>
+<p class="font-label-sm text-label-sm text-institutional-blue mb-4">Tecnologia, Engenharia, Saúde e Pesquisa</p>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm flex-grow mb-6">O campus sede concentra um grande polo tecnológico, centros de pesquisa avançada em engenharia e ampla infraestrutura de saúde e humanidades.</p>
+<button class="w-full bg-surface-white text-institutional-blue border border-institutional-blue px-4 py-2 rounded-lg font-label-md text-label-md hover:bg-surface transition-colors">Ver campus</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bento-card overflow-hidden flex flex-col">
+<div class="h-48 bg-surface-container relative">
+<img class="w-full h-full object-cover" data-alt="A professional photograph of an academic building focused on health sciences and education, located in a semi-arid Brazilian region. Clear skies, functional architecture, student areas visible." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDugVEpG6fiN5tuLQHGivf7m-ulfLTIV1penDG5nb6t5tTImdVr3P79RMAQgi_9hCNZ0MTNvAtkm46xtJrJS0L9bNcFZaHNL3Q9gpXhFMs8qF3sj4qkWakBZ7hkwrW4w2jPKjOZHjBHcIQ4J41vyuCcahBtIIo00qQyQmLm4mWCFhBXZwJMKY8sfSXpkG3XEpl440d99wczwXZi3mkRlI-XypnwbvIF_5C85oolD1VhfpIIHnn2gwIsD6QLpXLmA5RNutea1bk_KvOd"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-deep-navy mb-1">Cuité</h3>
+<p class="font-label-sm text-label-sm text-institutional-blue mb-4">Saúde, Educação e Desenvolvimento</p>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm flex-grow mb-6">Focado na formação de profissionais para a saúde e educação básica, com forte atuação no desenvolvimento da região do Curimataú.</p>
+<button class="w-full bg-surface-white text-institutional-blue border border-institutional-blue px-4 py-2 rounded-lg font-label-md text-label-md hover:bg-surface transition-colors">Ver campus</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bento-card overflow-hidden flex flex-col">
+<div class="h-48 bg-surface-container relative">
+<img class="w-full h-full object-cover" data-alt="A photograph of a university campus focused on agrarian sciences, featuring agricultural fields, veterinary facilities, and functional rural architecture under a bright sun." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA78ZDfKKgtRiPK6SMsClMDewpS8dFel-6q36RYbzMpVjWhPLomWGXLGlBzprL0NPAyU8H-t6CWWd58gdrUJiZz48NhlyJn-avdrZC-7pQvvZims9P2x94E994BE_9hQG2EJ56ahiBNWZInj8jZmGljf-7kmVHQjDmcMYWgf0NwJwGHtqp748-gNP-aOU4k6L-dJS_ecaAWZtSU09qfmP3UwFj6v2z3wRt50PsTZnZUoB26ai_fvXMGr9qDdkw-CfFsbJcRddoOAT97"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-deep-navy mb-1">Patos</h3>
+<p class="font-label-sm text-label-sm text-institutional-blue mb-4">Ciências Agrárias e Saúde Animal</p>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm flex-grow mb-6">Referência em medicina veterinária e ciências agrárias no sertão paraibano, com hospital veterinário e áreas de experimentação.</p>
+<button class="w-full bg-surface-white text-institutional-blue border border-institutional-blue px-4 py-2 rounded-lg font-label-md text-label-md hover:bg-surface transition-colors">Ver campus</button>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bento-card overflow-hidden flex flex-col">
+<div class="h-48 bg-surface-container relative">
+<img class="w-full h-full object-cover" data-alt="A clear, professional photo of an academic building housing a law and social sciences faculty in a regional Brazilian city. Clean facade, institutional flags, sunny day." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGUSEPUS3xuqsdk-wCnDf_jK9wqR_boegSADdalesYT029U-2Vovi1ADA-FBrtvqA2kfX5yF7Y0vOnzHCjvh_X-Uo5KUjg1-R20kwP5gUb2UIm-F9FN6HjqHhAvJHba7gVBSSdJjhiqC8FCExffLQcP8M-0L72Qtl2mpozw_IBwepgEg4kmVI1RZOgg75B859UOVtTI-ubAZenz_4H5FK2PsXzYqQSIvQyW3AyX7AA7HLOSZDzBf0lrVhS9a1kBHTxr-tjwMu-Yagb"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-deep-navy mb-1">Sousa</h3>
+<p class="font-label-sm text-label-sm text-institutional-blue mb-4">Direito e Ciências Sociais</p>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm flex-grow mb-6">Polo de excelência no ensino jurídico e humanidades, formando quadros críticos para a administração pública e sociedade civil.</p>
+<button class="w-full bg-surface-white text-institutional-blue border border-institutional-blue px-4 py-2 rounded-lg font-label-md text-label-md hover:bg-surface transition-colors">Ver campus</button>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="bento-card overflow-hidden flex flex-col">
+<div class="h-48 bg-surface-container relative">
+<img class="w-full h-full object-cover" data-alt="A professional daytime photo of a university campus focused on health and humanities in the high sertão region of Brazil. Functional institutional buildings, local flora." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZI_BcdhdGckb6J2vDJhdR3hdBQIBTa68WG0uJq5WEGfvbOF6s4SubJYgClaf6vZTYAEhe5Qb_6iqGXtimyoxUK1ZFSyt4p1Bxiqj-j6k3BzAzFalg9HkbhezVSudBeI78B4iazbmUXVEaeWlg8qu5e6RlFDOB-fM58B8Zyqta5VmvVk--OpjVO9Cb_bh_nmE5WON7cFlpLwLI3sASH4ORX9uRLjOG5SRsUr2NS_ZbBF0PyYP2aQf9HIMCzlBzaxCIb3r6nGnxZfTS"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-deep-navy mb-1">Cajazeiras</h3>
+<p class="font-label-sm text-label-sm text-institutional-blue mb-4">Educação, Saúde e Humanidades</p>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm flex-grow mb-6">Importante centro de formação de professores e profissionais de saúde, atendendo à demanda do alto sertão paraibano e estados vizinhos.</p>
+<button class="w-full bg-surface-white text-institutional-blue border border-institutional-blue px-4 py-2 rounded-lg font-label-md text-label-md hover:bg-surface transition-colors">Ver campus</button>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="bento-card overflow-hidden flex flex-col">
+<div class="h-48 bg-surface-container relative">
+<img class="w-full h-full object-cover" data-alt="A photo of a modern university building focused on engineering and environmental sciences in an inland Brazilian city. Clean lines, practical architecture, bright lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvb17b7iwIS-BhdbaWuAWiIrm1B61n7tsA_lgBl8FKtK5n4wvvqChVLXlPBtKnz26ynhOUOrNKYlaL0ZcoY3GWu7dEYaP1bkkG-ImH-Ui08lgMEXlbOhZvJxlTROcpA63IykXM_uBTo3jGxvvQ7qrFOy9TR6vvKXei85LI1Q-5woau5Ls4Uxnzc6k9g2DFKUA58IRxOuRLDKom0Qn-1uNHsclJ0GCpoQdvHWYfg3vEN_5KZk6eanTER7gGEIKVaV4_pPz3Wd7CKjuU"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-deep-navy mb-1">Pombal</h3>
+<p class="font-label-sm text-label-sm text-institutional-blue mb-4">Engenharia, Tecnologia e Ciências Agrárias</p>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm flex-grow mb-6">Unidade voltada para o desenvolvimento sustentável do semiárido, com cursos inovadores em engenharia ambiental e biossistemas.</p>
+<button class="w-full bg-surface-white text-institutional-blue border border-institutional-blue px-4 py-2 rounded-lg font-label-md text-label-md hover:bg-surface transition-colors">Ver campus</button>
+</div>
+</div>
+<div class="bento-card overflow-hidden flex flex-col">
+<div class="h-48 bg-surface-container relative">
+<img class="w-full h-full object-cover" data-alt="A professional photograph of a university campus in the Cariri region of Paraíba, Brazil. Modern academic buildings integrated with the local semi-arid landscape, under a clear blue sky." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_v_placeholder_sume_campus"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-deep-navy mb-1">Sumé</h3>
+<p class="font-label-sm text-label-sm text-institutional-blue mb-4">Educação, Gestão e Desenvolvimento Territorial</p>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm flex-grow mb-6">Campus localizado no Cariri paraibano, com atuação em educação, gestão pública, ciências sociais e desenvolvimento regional.</p>
+<button class="w-full bg-surface-white text-institutional-blue border border-institutional-blue px-4 py-2 rounded-lg font-label-md text-label-md hover:bg-surface transition-colors">Ver campus</button>
+</div>
+</div></div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-deep-navy dark:bg-black w-full py-stack-lg px-margin-mobile md:px-margin-desktop mt-auto border-t border-tertiary-container">
+<div class="w-full max-w-max-width mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
+<div class="flex flex-col gap-4">
+<span class="text-headline-md font-headline-md font-bold text-surface-white">UFCG</span>
+<p class="text-label-sm font-label-sm text-surface-variant max-w-xs">Universidade Federal de Campina Grande. Excelência em ensino, pesquisa e extensão.</p>
+</div>
+<div class="flex flex-col md:flex-row gap-8 md:gap-16">
+<div class="flex flex-col gap-3">
+<h4 class="text-label-md font-label-md text-surface-white mb-2">Institucional</h4>
+<a class="text-label-sm font-label-sm text-surface-variant hover:text-surface-white transition-colors" href="#">Transparência Pública</a>
+<a class="text-label-sm font-label-sm text-surface-variant hover:text-surface-white transition-colors" href="#">Acesso à Informação</a>
+<a class="text-label-sm font-label-sm text-surface-variant hover:text-surface-white transition-colors" href="#">Ouvidoria</a>
+<a class="text-label-sm font-label-sm text-surface-variant hover:text-surface-white transition-colors" href="#">Privacidade</a>
+</div>
+</div>
+</div>
+<div class="w-full max-w-max-width mx-auto mt-8 pt-8 border-t border-tertiary-container text-center">
+<p class="text-label-sm font-label-sm text-surface-variant">© 2024 Universidade Federal de Campina Grande. Todos os direitos reservados.</p>
+</div>
+</footer>
+</body></html>
