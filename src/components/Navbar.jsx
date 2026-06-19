@@ -3,18 +3,19 @@ import ufcgLogo from '../assets/ufcg-logo2.png'
 
 const utilityLinks = ['Acesso à Informação', 'Transparência', 'Ouvidoria', 'SEI', 'Sistemas', 'Contato']
 const navLinks = [
-  'A UFCG',
-  'Cursos',
-  'Pesquisa e Inovação',
-  'Extensão',
-  'Assistência Estudantil',
-  'Campi',
-  'Editais',
-  'Notícias',
+  { label: 'A UFCG', href: '/' },
+  { label: 'Cursos', href: '/cursos' },
+  { label: 'Pesquisa e Inovação', href: '#' },
+  { label: 'Extensão', href: '#' },
+  { label: 'Assistência Estudantil', href: '#' },
+  { label: 'Campi', href: '#' },
+  { label: 'Editais', href: '#' },
+  { label: 'Notícias', href: '#' },
 ]
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const currentPath = window.location.pathname.replace(/\/+$/, '') || '/'
 
   return (
     <header className="sticky top-0 z-40 border-b border-border-gray/80 bg-white">
@@ -48,17 +49,17 @@ function Navbar() {
         </a>
 
         <nav className="hidden min-w-0 flex-1 items-center justify-center gap-5 lg:flex xl:gap-6">
-          {navLinks.map((link, index) => (
+          {navLinks.map((link) => (
             <a
               className={
-                index === 0
+                currentPath === link.href
                   ? 'border-b-[3px] border-accent pb-[9px] pt-3 text-[12px] font-bold tracking-[0.12em] text-primary'
                   : 'pb-[9px] pt-3 text-[12px] font-semibold tracking-[0.12em] text-primary transition-colors hover:text-primary-reflex'
               }
-              href="#"
-              key={link}
+              href={link.href}
+              key={link.label}
             >
-              {link}
+              {link.label}
             </a>
           ))}
         </nav>
@@ -89,10 +90,10 @@ function Navbar() {
             {navLinks.map((link) => (
               <a
                 className="rounded-lg px-3 py-2 text-sm font-semibold text-primary transition-colors hover:bg-surface-container-low hover:text-primary-reflex"
-                href="#"
-                key={link}
+                href={link.href}
+                key={link.label}
               >
-                {link}
+                {link.label}
               </a>
             ))}
           </div>

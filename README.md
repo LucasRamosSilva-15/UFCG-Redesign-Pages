@@ -58,8 +58,10 @@ src/
     Navbar.jsx
     Footer.jsx
   pages/
+    Cursos.jsx
     Home.jsx
   data/
+    cursosData.js
     homeData.js
   App.jsx
   main.jsx
@@ -70,8 +72,8 @@ src/
 
 - `src/assets`: imagens, logos e arquivos visuais usados no projeto.
 - `src/components`: componentes globais da interface, como navbar e footer.
-- `src/pages`: páginas da aplicação. A homepage principal está em `Home.jsx`.
-- `src/data`: listas e conteúdos reutilizáveis da homepage centralizados em `homeData.js`.
+- `src/pages`: páginas da aplicação. A homepage está em `Home.jsx` e a página de cursos em `Cursos.jsx`.
+- `src/data`: listas e conteúdos reutilizáveis centralizados em `homeData.js` e `cursosData.js`.
 - `src/index.css`: configuração visual global, tokens de tema e estilos base do Tailwind CSS.
 - `docs/design.md`: documentação da direção visual e paleta institucional do projeto.
 
