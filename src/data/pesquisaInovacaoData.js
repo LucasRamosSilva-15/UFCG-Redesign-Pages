@@ -71,7 +71,7 @@ export const researchAreas = [
 ]
 
 export const innovationImage =
-  'https://lh3.googleusercontent.com/aida-public/AB6AXuAZbqS360g-9hfUjIVJrBrrcgF7hQ3C1PsXLwBwTA27Ev6JO23ySlROKZnbVaPs9wpuQ-3SZi0kMO671bf1ACaGX1wkWS66L86NYuhZCY8VdnPG2t0yZUBftcNGjaNH9bqZ7ZdqtBcOmTQaYlYqHVstWG5TK4KqZNZMGWDlyvRGOazpG_zZqVNnMbqEd0RBiaBVhf4QYaRIRkMnUpMLFCE6O5cVzKRa91jMZeaJ_iQMgsW4tKuL59MryZMnU7zOWN6VGqB4_0wUQbI2'
+  'https://midias-totvs.totvs.com/wp-content/uploads/2024/08/inovacao-e-tecnologia.jpg'
 
 export const innovationItems = [
   {

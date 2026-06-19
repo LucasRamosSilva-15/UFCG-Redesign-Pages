@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Extensão - UFCG</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Serif:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container": "#edeeef",
+                    "on-primary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "on-primary-container": "#8aa4ff",
+                    "primary-container": "#003399",
+                    "on-secondary-container": "#6e5c00",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed": "#dae2ff",
+                    "on-primary-fixed-variant": "#153ea3",
+                    "secondary-fixed-dim": "#e9c400",
+                    "tertiary": "#072459",
+                    "inverse-surface": "#2e3132",
+                    "surface-tint": "#3557bc",
+                    "error": "#ba1a1a",
+                    "surface-variant": "#e1e3e4",
+                    "on-error-container": "#93000a",
+                    "on-background": "#191c1d",
+                    "surface-white": "#FFFFFF",
+                    "outline": "#747684",
+                    "on-secondary-fixed": "#221b00",
+                    "on-tertiary-fixed-variant": "#2e457b",
+                    "tertiary-container": "#233b70",
+                    "surface-container-highest": "#e1e3e4",
+                    "secondary": "#705d00",
+                    "accent-gold": "#FFD700",
+                    "tertiary-fixed-dim": "#b1c5ff",
+                    "surface-dim": "#d9dadb",
+                    "on-error": "#ffffff",
+                    "deep-navy": "#001F54",
+                    "inverse-on-surface": "#f0f1f2",
+                    "on-secondary-fixed-variant": "#544600",
+                    "secondary-container": "#fcd400",
+                    "on-tertiary-container": "#90a7e3",
+                    "on-surface": "#191c1d",
+                    "text-main": "#333333",
+                    "surface-container-lowest": "#ffffff",
+                    "institutional-blue": "#003399",
+                    "primary": "#002068",
+                    "secondary-fixed": "#ffe16d",
+                    "surface-container-low": "#f3f4f5",
+                    "on-primary-fixed": "#00164e",
+                    "background": "#f8f9fa",
+                    "surface": "#f8f9fa",
+                    "outline-variant": "#c4c5d5",
+                    "surface-bright": "#f8f9fa",
+                    "on-surface-variant": "#444653",
+                    "border-gray": "#E6E6E6",
+                    "primary-fixed-dim": "#b5c4ff",
+                    "on-tertiary-fixed": "#001946",
+                    "inverse-primary": "#b5c4ff",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed": "#dce1ff",
+                    "surface-container-high": "#e7e8e9"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "stack-lg": "32px",
+                    "stack-sm": "8px",
+                    "stack-md": "16px",
+                    "utility-height": "40px",
+                    "max-width": "1280px",
+                    "margin-desktop": "48px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "headline-lg": [
+                            "IBM Plex Serif"
+                    ],
+                    "body-lg": [
+                            "IBM Plex Sans"
+                    ],
+                    "label-md": [
+                            "IBM Plex Sans"
+                    ],
+                    "display-lg": [
+                            "IBM Plex Serif"
+                    ],
+                    "utility-bar": [
+                            "IBM Plex Sans"
+                    ],
+                    "body-md": [
+                            "IBM Plex Sans"
+                    ],
+                    "label-sm": [
+                            "IBM Plex Sans"
+                    ],
+                    "headline-lg-mobile": [
+                            "IBM Plex Serif"
+                    ],
+                    "headline-md": [
+                            "IBM Plex Serif"
+                    ]
+            },
+            "fontSize": {
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-md": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "display-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "56px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "utility-bar": [
+                            "13px",
+                            {
+                                    "lineHeight": "18px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-sm": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0.03em",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "28px",
+                            {
+                                    "lineHeight": "36px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "fontWeight": "500"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        body { background-color: theme('colors.background'); color: theme('colors.on-surface'); }
+    </style>
+</head>
+<body class="font-body-md text-body-md antialiased flex flex-col min-h-screen">
+<!-- TopNavBar -->
+<div class="bg-deep-navy dark:bg-deep-navy docked full-width top-0 text-on-primary dark:text-on-primary">
+<div class="flex justify-between items-center w-full h-[40px] px-margin-desktop max-w-max-width mx-auto text-utility-bar font-utility-bar">
+<div class="text-utility-bar font-utility-bar font-bold text-on-primary">UFCG</div>
+<nav class="hidden md:flex space-x-6">
+<a class="text-on-primary opacity-90 hover:text-accent-gold transition-colors duration-200" href="#">Acesso à Informação</a>
+<a class="text-on-primary opacity-90 hover:text-accent-gold transition-colors duration-200" href="#">Transparência</a>
+<a class="text-on-primary opacity-90 hover:text-accent-gold transition-colors duration-200" href="#">Ouvidoria</a>
+<a class="text-on-primary opacity-90 hover:text-accent-gold transition-colors duration-200" href="#">SEI</a>
+<a class="text-on-primary opacity-90 hover:text-accent-gold transition-colors duration-200" href="#">Sistemas</a>
+<a class="text-on-primary opacity-90 hover:text-accent-gold transition-colors duration-200" href="#">Contato</a>
+</nav>
+<div class="flex items-center space-x-4">
+<a class="text-on-primary opacity-90 hover:text-accent-gold transition-colors duration-200 font-bold" href="#">Sistemas UFCG</a>
+<span class="material-symbols-outlined cursor-pointer hover:text-accent-gold transition-colors duration-200">search</span>
+</div>
+</div>
+</div>
+<!-- SideNavBar (Used as Main Nav here for layout flow, adapted to top) -->
+<header class="bg-surface-white dark:bg-surface-container border-b border-border-gray dark:border-outline-variant docked full-width shadow-sm sticky top-[40px] z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-max-width mx-auto">
+<div class="flex items-center gap-4">
+<img alt="UFCG Institutional Logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLu_TEyqkHL6Le6JcDn5d79t4sa9ffDhRKBfHDqjW-_5S2NkMIxLgzDGqAM1yIEaXNG5w_Xhk1FFv5ohfuA6DS1d00SgI-zr_AivhhAhde-GxJ3i92fpAzcYxpLlDwUXdyFaGd_YH5sjhUT6ye9PqMd2eNJ6IpfwFu-zxnYTz6kIp2Xj0unGm-p_IFPDatux5tCoq6i_FxaNXoA_Io8rnCmC764UVl986-GdsGY8eKumwl6hknKdurY_8r91"/>
+</div>
+<nav class="hidden md:flex gap-6 items-center">
+<a class="text-on-surface-variant font-medium hover:text-institutional-blue hover:bg-surface-container-low transition-all px-3 py-2 rounded-md flex items-center gap-2 text-label-md font-label-md" href="#"><span class="material-symbols-outlined text-[20px]">account_balance</span> A UFCG</a>
+<a class="text-on-surface-variant font-medium hover:text-institutional-blue hover:bg-surface-container-low transition-all px-3 py-2 rounded-md flex items-center gap-2 text-label-md font-label-md" href="#"><span class="material-symbols-outlined text-[20px]">school</span> Cursos</a>
+<a class="text-on-surface-variant font-medium hover:text-institutional-blue hover:bg-surface-container-low transition-all px-3 py-2 rounded-md flex items-center gap-2 text-label-md font-label-md" href="#"><span class="material-symbols-outlined text-[20px]">science</span> Pesquisa e Inovação</a>
+<a class="text-institutional-blue font-bold border-b-2 border-institutional-blue px-3 py-2 flex items-center gap-2 text-label-md font-label-md" href="#"><span class="material-symbols-outlined text-[20px]">campaign</span> Extensão</a>
+<a class="text-on-surface-variant font-medium hover:text-institutional-blue hover:bg-surface-container-low transition-all px-3 py-2 rounded-md flex items-center gap-2 text-label-md font-label-md" href="#"><span class="material-symbols-outlined text-[20px]">diversity_3</span> Assistência Estudantil</a>
+<a class="text-on-surface-variant font-medium hover:text-institutional-blue hover:bg-surface-container-low transition-all px-3 py-2 rounded-md flex items-center gap-2 text-label-md font-label-md" href="#"><span class="material-symbols-outlined text-[20px]">location_city</span> Campi</a>
+</nav>
+<button class="md:hidden text-on-surface-variant">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Breadcrumbs -->
+<div class="max-w-max-width mx-auto px-margin-desktop py-stack-md mt-4">
+<nav class="text-label-sm font-label-sm flex items-center space-x-2 text-institutional-blue">
+<a class="hover:underline" href="#">Início</a>
+<span class="text-outline">/</span>
+<span class="text-text-main font-medium">Extensão</span>
+</nav>
+</div>
+<!-- Hero Section -->
+<section class="max-w-max-width mx-auto px-margin-desktop mb-stack-lg">
+<div class="bg-institutional-blue rounded-xl overflow-hidden flex flex-col md:flex-row relative">
+<!-- Abstract pattern overlay -->
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-white via-transparent to-transparent pointer-events-none"></div>
+<div class="p-8 md:p-12 md:w-2/3 relative z-10 flex flex-col justify-center text-on-primary">
+<h1 class="text-display-lg font-display-lg mb-stack-sm md:text-display-lg text-headline-lg-mobile font-headline-lg-mobile">Extensão Universitária</h1>
+<p class="text-headline-md font-headline-md font-medium mb-stack-md text-primary-fixed-dim">Conhecimento, compromisso social e transformação junto à comunidade.</p>
+<p class="text-body-lg font-body-lg mb-stack-lg max-w-2xl text-surface-container-low">A extensão universitária conecta a UFCG à sociedade por meio de projetos, programas e ações que promovem desenvolvimento social, cultural, científico e tecnológico.</p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-surface-white text-institutional-blue hover:bg-surface-container-low px-6 py-3 rounded-lg font-label-md text-label-md transition-colors shadow-sm font-medium">Conheça os projetos</button>
+<button class="bg-transparent border border-surface-white text-surface-white hover:bg-surface-white/10 px-6 py-3 rounded-lg font-label-md text-label-md transition-colors font-medium">Editais de extensão</button>
+<button class="bg-transparent border border-surface-white text-surface-white hover:bg-surface-white/10 px-6 py-3 rounded-lg font-label-md text-label-md transition-colors font-medium">Como participar</button>
+</div>
+</div>
+<div class="md:w-1/3 relative hidden md:block overflow-hidden min-h-[300px]">
+<!-- Using CSS gradient pattern as requested for abstract visual detail, no image placeholder unless specifically asked -->
+<div class="absolute inset-0 bg-gradient-to-br from-primary-container to-deep-navy flex items-center justify-center opacity-80">
+<span class="material-symbols-outlined text-[120px] text-white/20">diversity_1</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Extensão na UFCG -->
+<section class="max-w-max-width mx-auto px-margin-desktop py-stack-lg">
+<div class="mb-stack-lg max-w-3xl">
+<h2 class="text-headline-lg font-headline-lg text-deep-navy mb-stack-sm">Extensão na UFCG</h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant">O diálogo permanente entre a universidade e os diversos setores da sociedade visa à troca de saberes, à democratização do conhecimento e à busca de soluções para os problemas sociais contemporâneos, consolidando o compromisso cidadão da instituição.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="bg-surface-white border border-border-gray rounded-lg p-6 hover:shadow-[0_4px_12px_rgba(0,31,84,0.08)] transition-shadow">
+<div class="w-12 h-12 bg-primary-fixed rounded-full flex items-center justify-center mb-4 text-institutional-blue">
+<span class="material-symbols-outlined">assignment</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-deep-navy mb-2 text-[20px]">Projetos de extensão</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Iniciativas específicas voltadas para o atendimento de demandas sociais locais e regionais.</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-white border border-border-gray rounded-lg p-6 hover:shadow-[0_4px_12px_rgba(0,31,84,0.08)] transition-shadow">
+<div class="w-12 h-12 bg-primary-fixed rounded-full flex items-center justify-center mb-4 text-institutional-blue">
+<span class="material-symbols-outlined">account_balance</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-deep-navy mb-2 text-[20px]">Programas (PROBEX/FLUEX)</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Ações de caráter orgânico-institucional continuadas, integrando ensino, pesquisa e extensão.</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-white border border-border-gray rounded-lg p-6 hover:shadow-[0_4px_12px_rgba(0,31,84,0.08)] transition-shadow">
+<div class="w-12 h-12 bg-primary-fixed rounded-full flex items-center justify-center mb-4 text-institutional-blue">
+<span class="material-symbols-outlined">group</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-deep-navy mb-2 text-[20px]">Ações comunitárias</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Intervenções diretas junto a comunidades, promovendo assistência, capacitação e suporte técnico.</p>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-white border border-border-gray rounded-lg p-6 hover:shadow-[0_4px_12px_rgba(0,31,84,0.08)] transition-shadow">
+<div class="w-12 h-12 bg-primary-fixed rounded-full flex items-center justify-center mb-4 text-institutional-blue">
+<span class="material-symbols-outlined">palette</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-deep-navy mb-2 text-[20px]">Cultura e cidadania</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Fomento às manifestações culturais, artísticas e preservação do patrimônio histórico regional.</p>
+</div>
+<!-- Card 5 -->
+<div class="bg-surface-white border border-border-gray rounded-lg p-6 hover:shadow-[0_4px_12px_rgba(0,31,84,0.08)] transition-shadow">
+<div class="w-12 h-12 bg-primary-fixed rounded-full flex items-center justify-center mb-4 text-institutional-blue">
+<span class="material-symbols-outlined">school</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-deep-navy mb-2 text-[20px]">Formação estudantil</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Oportunidades práticas que complementam a formação acadêmica dos estudantes da UFCG.</p>
+</div>
+<!-- Card 6 -->
+<div class="bg-surface-white border border-border-gray rounded-lg p-6 hover:shadow-[0_4px_12px_rgba(0,31,84,0.08)] transition-shadow">
+<div class="w-12 h-12 bg-primary-fixed rounded-full flex items-center justify-center mb-4 text-institutional-blue">
+<span class="material-symbols-outlined">public</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-deep-navy mb-2 text-[20px]">Impacto social</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Acompanhamento e avaliação dos resultados das ações extensionistas na melhoria da qualidade de vida.</p>
+</div>
+</div>
+</section>
+<!-- Áreas de atuação (Bento Grid Style) -->
+<section class="bg-surface-container-low py-stack-lg border-y border-border-gray">
+<div class="max-w-max-width mx-auto px-margin-desktop">
+<div class="flex justify-between items-end mb-stack-md">
+<h2 class="text-headline-lg font-headline-lg text-deep-navy">Áreas de atuação</h2>
+<a class="text-institutional-blue font-label-md text-label-md hover:underline flex items-center gap-1" href="#">Ver todas <span class="material-symbols-outlined text-[18px]">arrow_forward</span></a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-gutter">
+<!-- Educação -->
+<a class="group block bg-surface-white p-6 rounded-lg border border-border-gray hover:border-institutional-blue hover:shadow-[0_4px_12px_rgba(0,31,84,0.08)] transition-all" href="#">
+<span class="material-symbols-outlined text-institutional-blue text-display-lg mb-4 group-hover:scale-110 transition-transform">menu_book</span>
+<h3 class="text-label-md font-label-md text-deep-navy mb-1">Educação</h3>
+<span class="text-label-sm font-label-sm text-institutional-blue flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">Ver ações <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</a>
+<!-- Saúde -->
+<a class="group block bg-surface-white p-6 rounded-lg border border-border-gray hover:border-institutional-blue hover:shadow-[0_4px_12px_rgba(0,31,84,0.08)] transition-all" href="#">
+<span class="material-symbols-outlined text-institutional-blue text-display-lg mb-4 group-hover:scale-110 transition-transform">health_and_safety</span>
+<h3 class="text-label-md font-label-md text-deep-navy mb-1">Saúde</h3>
+<span class="text-label-sm font-label-sm text-institutional-blue flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">Ver ações <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</a>
+<!-- Cultura -->
+<a class="group block bg-surface-white p-6 rounded-lg border border-border-gray hover:border-institutional-blue hover:shadow-[0_4px_12px_rgba(0,31,84,0.08)] transition-all" href="#">
+<span class="material-symbols-outlined text-institutional-blue text-display-lg mb-4 group-hover:scale-110 transition-transform">theater_comedy</span>
+<h3 class="text-label-md font-label-md text-deep-navy mb-1">Cultura</h3>
+<span class="text-label-sm font-label-sm text-institutional-blue flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">Ver ações <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</a>
+<!-- Tecnologia e Inovação Social -->
+<a class="group block bg-surface-white p-6 rounded-lg border border-border-gray hover:border-institutional-blue hover:shadow-[0_4px_12px_rgba(0,31,84,0.08)] transition-all" href="#">
+<span class="material-symbols-outlined text-institutional-blue text-display-lg mb-4 group-hover:scale-110 transition-transform">lightbulb</span>
+<h3 class="text-label-md font-label-md text-deep-navy mb-1">Tecnologia e Inovação Social</h3>
+<span class="text-label-sm font-label-sm text-institutional-blue flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">Ver ações <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</a>
+<!-- Meio Ambiente -->
+<a class="group block bg-surface-white p-6 rounded-lg border border-border-gray hover:border-institutional-blue hover:shadow-[0_4px_12px_rgba(0,31,84,0.08)] transition-all" href="#">
+<span class="material-symbols-outlined text-institutional-blue text-display-lg mb-4 group-hover:scale-110 transition-transform">eco</span>
+<h3 class="text-label-md font-label-md text-deep-navy mb-1">Meio Ambiente</h3>
+<span class="text-label-sm font-label-sm text-institutional-blue flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">Ver ações <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</a>
+<!-- Direitos Humanos -->
+<a class="group block bg-surface-white p-6 rounded-lg border border-border-gray hover:border-institutional-blue hover:shadow-[0_4px_12px_rgba(0,31,84,0.08)] transition-all" href="#">
+<span class="material-symbols-outlined text-institutional-blue text-display-lg mb-4 group-hover:scale-110 transition-transform">gavel</span>
+<h3 class="text-label-md font-label-md text-deep-navy mb-1">Direitos Humanos</h3>
+<span class="text-label-sm font-label-sm text-institutional-blue flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">Ver ações <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</a>
+<!-- Desenvolvimento Regional -->
+<a class="group block bg-surface-white p-6 rounded-lg border border-border-gray hover:border-institutional-blue hover:shadow-[0_4px_12px_rgba(0,31,84,0.08)] transition-all" href="#">
+<span class="material-symbols-outlined text-institutional-blue text-display-lg mb-4 group-hover:scale-110 transition-transform">map</span>
+<h3 class="text-label-md font-label-md text-deep-navy mb-1">Desenvolvimento Regional</h3>
+<span class="text-label-sm font-label-sm text-institutional-blue flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">Ver ações <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</a>
+<!-- Comunicação -->
+<a class="group block bg-surface-white p-6 rounded-lg border border-border-gray hover:border-institutional-blue hover:shadow-[0_4px_12px_rgba(0,31,84,0.08)] transition-all" href="#">
+<span class="material-symbols-outlined text-institutional-blue text-display-lg mb-4 group-hover:scale-110 transition-transform">cell_tower</span>
+<h3 class="text-label-md font-label-md text-deep-navy mb-1">Comunicação</h3>
+<span class="text-label-sm font-label-sm text-institutional-blue flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">Ver ações <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</a>
+</div>
+</div>
+</section>
+<!-- Highlighted Section "Impacto Social" -->
+<section class="bg-deep-navy py-stack-lg text-on-primary">
+<div class="max-w-max-width mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<div>
+<h2 class="text-headline-lg font-headline-lg mb-stack-sm text-surface-white">Impacto social e desenvolvimento regional</h2>
+<p class="text-body-lg font-body-lg mb-stack-md text-primary-fixed-dim">As ações de extensão da UFCG fortalecem a presença da universidade nos territórios, promovendo a transformação sustentável, a redução de desigualdades e a emancipação das comunidades envolvidas, alinhando-se aos objetivos de desenvolvimento sustentável.</p>
+<ul class="space-y-3 mb-stack-lg">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-accent-gold">check_circle</span>
+<span class="font-medium">Comunidade e diálogo participativo</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-accent-gold">check_circle</span>
+<span class="font-medium">Inclusão social e produtiva</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-accent-gold">check_circle</span>
+<span class="font-medium">Formação cidadã e ética</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-accent-gold">check_circle</span>
+<span class="font-medium">Desenvolvimento regional sustentável</span>
+</li>
+</ul>
+<button class="bg-institutional-blue text-on-primary border border-institutional-blue hover:bg-primary-container hover:border-surface-white px-6 py-3 rounded-lg font-label-md text-label-md transition-all font-medium">Conhecer ações de extensão</button>
+</div>
+<!-- Using a placeholder for an image representing social impact, as requested -->
+<div class="relative h-[400px] rounded-xl overflow-hidden border-2 border-primary-container">
+<img class="w-full h-full object-cover" data-alt="A photograph capturing a community engagement scene outdoors under natural sunlight. University students and community members are gathered around a table studying a map or document, engaged in lively discussion. The setting is a bright, dusty outdoor area near simple, light-colored buildings with red tile roofs and mature trees providing shade. Everyone is wearing casual, practical clothing, with several students in matching blue t-shirts. The mood is collaborative, positive, and deeply connected to the local environment, reflecting social impact and regional development. The visual style is clear, authentic documentary photography with high contrast and vibrant natural colors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwy6Jh5E8oXBylEK7T5rxItPUIawjtyOi1a5qMFwTmglyhxG-iXC8-8BwxIVjb6jKI64_0niqh4YqL4krvyk5pRFZglhI6vX6n_NMgpHWE7cut_b2dBNk6eBFCgqoYo9AI-TlDJqK-kVklBIioW8n7bg5LdAz8qzT62jVMs3FUCiMyxpIa1idzYOmV_42L8UXz3hx_C_BmmVPKRRe_n8BghhnYgU_kfiDA46AJrAO1Ey7vBH46Yc4ssbY74b4PqAJTfDxbsiQ-bJtH"/>
+</div>
+</div>
+</section>
+<!-- Como participar -->
+<section class="max-w-max-width mx-auto px-margin-desktop py-stack-lg">
+<h2 class="text-headline-lg font-headline-lg text-deep-navy mb-stack-md text-center">Como participar</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="bg-surface-container-low p-6 rounded-lg border-t-4 border-institutional-blue text-center flex flex-col items-center">
+<span class="material-symbols-outlined text-display-lg text-institutional-blue mb-4">school</span>
+<h3 class="text-headline-md font-headline-md text-deep-navy mb-2 text-[20px]">Sou estudante</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-4 flex-grow">Participe de projetos como voluntário ou bolsista (PROBEX) e enriqueça sua formação acadêmica.</p>
+<button class="text-institutional-blue font-label-md text-label-md hover:underline font-semibold">Ver oportunidades</button>
+</div>
+<div class="bg-surface-container-low p-6 rounded-lg border-t-4 border-institutional-blue text-center flex flex-col items-center">
+<span class="material-symbols-outlined text-display-lg text-institutional-blue mb-4">badge</span>
+<h3 class="text-headline-md font-headline-md text-deep-navy mb-2 text-[20px]">Sou professor ou servidor</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-4 flex-grow">Proponha projetos, coordene ações extensionistas e oriente estudantes nas comunidades.</p>
+<button class="text-institutional-blue font-label-md text-label-md hover:underline font-semibold">Submeter projeto</button>
+</div>
+<div class="bg-surface-container-low p-6 rounded-lg border-t-4 border-institutional-blue text-center flex flex-col items-center">
+<span class="material-symbols-outlined text-display-lg text-institutional-blue mb-4">volunteer_activism</span>
+<h3 class="text-headline-md font-headline-md text-deep-navy mb-2 text-[20px]">Sou da comunidade</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-4 flex-grow">Participe das ações, cursos abertos e serviços oferecidos pela universidade em sua região.</p>
+<button class="text-institutional-blue font-label-md text-label-md hover:underline font-semibold">Serviços oferecidos</button>
+</div>
+<div class="bg-surface-container-low p-6 rounded-lg border-t-4 border-institutional-blue text-center flex flex-col items-center">
+<span class="material-symbols-outlined text-display-lg text-institutional-blue mb-4">handshake</span>
+<h3 class="text-headline-md font-headline-md text-deep-navy mb-2 text-[20px]">Sou parceiro institucional</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-4 flex-grow">Estabeleça convênios, parcerias públicas ou privadas para apoiar e ampliar o impacto das ações.</p>
+<button class="text-institutional-blue font-label-md text-label-md hover:underline font-semibold">Firmar parceria</button>
+</div>
+</div>
+</section>
+<!-- Editais e oportunidades (Structured Table) -->
+<section class="max-w-max-width mx-auto px-margin-desktop mb-stack-lg">
+<div class="flex justify-between items-end mb-stack-md border-b border-border-gray pb-4">
+<h2 class="text-headline-lg font-headline-lg text-deep-navy">Editais e oportunidades</h2>
+<button class="text-institutional-blue font-label-md text-label-md hover:underline font-semibold flex items-center gap-1">Todos os editais <span class="material-symbols-outlined text-[18px]">arrow_forward</span></button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse min-w-[800px]">
+<thead>
+<tr class="bg-deep-navy text-on-primary">
+<th class="py-3 px-4 font-label-md text-label-md rounded-tl-lg">Data</th>
+<th class="py-3 px-4 font-label-md text-label-md">Categoria</th>
+<th class="py-3 px-4 font-label-md text-label-md w-1/2">Título</th>
+<th class="py-3 px-4 font-label-md text-label-md">Status</th>
+<th class="py-3 px-4 font-label-md text-label-md rounded-tr-lg text-right">Acesso</th>
+</tr>
+</thead>
+<tbody class="text-body-md font-body-md text-on-surface">
+<tr class="border-b border-border-gray hover:bg-surface-container-low transition-colors">
+<td class="py-4 px-4 text-on-surface-variant">15/05/2024</td>
+<td class="py-4 px-4"><span class="bg-primary-fixed text-institutional-blue px-2 py-1 rounded text-[12px] font-semibold">Extensão / Bolsas</span></td>
+<td class="py-4 px-4 font-medium text-deep-navy">Edital PROBEX 2024 - Seleção de Projetos e Bolsistas</td>
+<td class="py-4 px-4">
+<span class="flex items-center gap-1 text-secondary-fixed-dim font-medium"><span class="material-symbols-outlined text-[16px]">circle</span> Inscrições Abertas</span>
+</td>
+<td class="py-4 px-4 text-right">
+<button class="text-institutional-blue hover:text-primary-container p-2 rounded-md hover:bg-primary-fixed-dim transition-colors"><span class="material-symbols-outlined">description</span></button>
+</td>
+</tr>
+<tr class="bg-surface-bright border-b border-border-gray hover:bg-surface-container-low transition-colors">
+<td class="py-4 px-4 text-on-surface-variant">02/05/2024</td>
+<td class="py-4 px-4"><span class="bg-surface-variant text-on-surface-variant px-2 py-1 rounded text-[12px] font-semibold">Cultura</span></td>
+<td class="py-4 px-4 font-medium text-deep-navy">Edital de Fomento à Cultura e Arte Universitária (FLUEX)</td>
+<td class="py-4 px-4">
+<span class="flex items-center gap-1 text-outline"><span class="material-symbols-outlined text-[16px]">hourglass_empty</span> Em andamento</span>
+</td>
+<td class="py-4 px-4 text-right">
+<button class="text-institutional-blue hover:text-primary-container p-2 rounded-md hover:bg-primary-fixed-dim transition-colors"><span class="material-symbols-outlined">description</span></button>
+</td>
+</tr>
+<tr class="border-b border-border-gray hover:bg-surface-container-low transition-colors">
+<td class="py-4 px-4 text-on-surface-variant">20/04/2024</td>
+<td class="py-4 px-4"><span class="bg-tertiary-fixed text-tertiary px-2 py-1 rounded text-[12px] font-semibold">Ação Comunitária</span></td>
+<td class="py-4 px-4 font-medium text-deep-navy">Seleção para Voluntários - Projeto Cursinho Solidário</td>
+<td class="py-4 px-4">
+<span class="flex items-center gap-1 text-secondary-fixed-dim font-medium"><span class="material-symbols-outlined text-[16px]">circle</span> Inscrições Abertas</span>
+</td>
+<td class="py-4 px-4 text-right">
+<button class="text-institutional-blue hover:text-primary-container p-2 rounded-md hover:bg-primary-fixed-dim transition-colors"><span class="material-symbols-outlined">description</span></button>
+</td>
+</tr>
+<tr class="bg-surface-bright border-b border-border-gray hover:bg-surface-container-low transition-colors">
+<td class="py-4 px-4 text-on-surface-variant">10/03/2024</td>
+<td class="py-4 px-4"><span class="bg-surface-variant text-on-surface-variant px-2 py-1 rounded text-[12px] font-semibold">Extensão</span></td>
+<td class="py-4 px-4 font-medium text-deep-navy">Edital de Cadastramento de Ações de Extensão Fluxo Contínuo</td>
+<td class="py-4 px-4">
+<span class="flex items-center gap-1 text-institutional-blue font-medium"><span class="material-symbols-outlined text-[16px]">check_circle</span> Permanente</span>
+</td>
+<td class="py-4 px-4 text-right">
+<button class="text-institutional-blue hover:text-primary-container p-2 rounded-md hover:bg-primary-fixed-dim transition-colors"><span class="material-symbols-outlined">description</span></button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="bg-surface-container py-stack-lg border-t border-border-gray mt-stack-lg">
+<div class="max-w-max-width mx-auto px-margin-desktop text-center">
+<h2 class="text-display-lg font-display-lg text-deep-navy mb-stack-sm md:text-display-lg text-headline-lg-mobile font-headline-lg-mobile">Conhecimento que transforma realidades</h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant mb-stack-lg max-w-2xl mx-auto">Engaje-se nas ações de extensão da UFCG e faça parte do desenvolvimento social e tecnológico da nossa região.</p>
+<div class="flex flex-wrap justify-center gap-4">
+<button class="bg-institutional-blue text-surface-white hover:bg-primary-container px-8 py-3 rounded-lg font-label-md text-label-md transition-colors shadow-sm font-medium">Ver editais</button>
+<button class="bg-surface-white text-institutional-blue border border-institutional-blue hover:bg-surface-container-low px-8 py-3 rounded-lg font-label-md text-label-md transition-colors font-medium">Conhecer projetos</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-deep-navy dark:bg-deep-navy text-on-primary dark:text-on-primary full-width border-t-4 border-accent-gold focus:outline-none focus:ring-2 focus:ring-accent-gold">
+<div class="w-full py-12 px-margin-desktop max-w-max-width mx-auto grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-gutter">
+<div class="lg:col-span-2 mb-stack-md lg:mb-0">
+<img alt="UFCG Institutional Footer Logo" class="h-16 w-auto object-contain mb-4 filter brightness-0 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdORNK83W1BQzwnNH4mP7rdKgBHZv-9gnf9QRG4_CdszPLNBr-j_BDJhXdijfXQ0tOaQv1hzOKBvNwGICudNSzslDhoZ1_xnpTa2b-9K1mLhkcSx9qMFZ7_ZPg9b7s0fayOKwW4cs_xT7iN2kLxKhuy9e9YseFuO38D758DR7Njy1k6uOh_OaVtnKGn1otLW2kDA2WuIT8y0hBLB2d88bFtxhF2t7B0eVZbcHpc8OBAb68K4xAiYIiFXM7foKtd7uOqKNF-8eQOay7"/>
+<p class="text-utility-bar font-utility-bar opacity-80 max-w-xs mb-4">Universidade Federal de Campina Grande<br/>Ministério da Educação</p>
+</div>
+<div>
+<h3 class="text-label-md font-label-md font-bold mb-4 uppercase tracking-wider text-surface-white">Institucional</h3>
+<ul class="space-y-2">
+<li><a class="text-label-sm font-label-sm text-on-primary opacity-80 hover:text-accent-gold hover:opacity-100 transition-opacity" href="#">A UFCG</a></li>
+<li><a class="text-label-sm font-label-sm text-on-primary opacity-80 hover:text-accent-gold hover:opacity-100 transition-opacity" href="#">Campi</a></li>
+<li><a class="text-label-sm font-label-sm text-on-primary opacity-80 hover:text-accent-gold hover:opacity-100 transition-opacity" href="#">Gestão</a></li>
+<li><a class="text-label-sm font-label-sm text-on-primary opacity-80 hover:text-accent-gold hover:opacity-100 transition-opacity" href="#">Documentos Institucionais</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-label-md font-label-md font-bold mb-4 uppercase tracking-wider text-surface-white">Acadêmico</h3>
+<ul class="space-y-2">
+<li><a class="text-label-sm font-label-sm text-on-primary opacity-80 hover:text-accent-gold hover:opacity-100 transition-opacity" href="#">Ensino</a></li>
+<li><a class="text-label-sm font-label-sm text-on-primary opacity-80 hover:text-accent-gold hover:opacity-100 transition-opacity" href="#">Pesquisa e Extensão</a></li>
+<li><a class="text-label-sm font-label-sm text-on-primary opacity-80 hover:text-accent-gold hover:opacity-100 transition-opacity" href="#">Assistência Estudantil</a></li>
+<li><a class="text-label-sm font-label-sm text-on-primary opacity-80 hover:text-accent-gold hover:opacity-100 transition-opacity" href="#">Bibliotecas</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-label-md font-label-md font-bold mb-4 uppercase tracking-wider text-surface-white">Serviços</h3>
+<ul class="space-y-2">
+<li><a class="text-label-sm font-label-sm text-on-primary opacity-80 hover:text-accent-gold hover:opacity-100 transition-opacity" href="#">Sistemas UFCG</a></li>
+<li><a class="text-label-sm font-label-sm text-on-primary opacity-80 hover:text-accent-gold hover:opacity-100 transition-opacity" href="#">Transparência</a></li>
+<li><a class="text-label-sm font-label-sm text-on-primary opacity-80 hover:text-accent-gold hover:opacity-100 transition-opacity" href="#">Ouvidoria</a></li>
+<li><a class="text-label-sm font-label-sm text-on-primary opacity-80 hover:text-accent-gold hover:opacity-100 transition-opacity" href="#">Contato</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-label-md font-label-md font-bold mb-4 uppercase tracking-wider text-surface-white">Legal</h3>
+<ul class="space-y-2">
+<li><a class="text-label-sm font-label-sm text-on-primary opacity-80 hover:text-accent-gold hover:opacity-100 transition-opacity" href="#">LGPD</a></li>
+<li><a class="text-label-sm font-label-sm text-on-primary opacity-80 hover:text-accent-gold hover:opacity-100 transition-opacity" href="#">Privacidade</a></li>
+<li><a class="text-label-sm font-label-sm text-on-primary opacity-80 hover:text-accent-gold hover:opacity-100 transition-opacity" href="#">Acessibilidade</a></li>
+</ul>
+</div>
+<div class="col-span-1 md:col-span-4 lg:col-span-6 mt-8 pt-8 border-t border-white/20 text-center">
+<p class="text-utility-bar font-utility-bar opacity-70">© 2024 Universidade Federal de Campina Grande - UFCG. Todos os direitos reservados.</p>
+</div>
+</div>
+</footer>
+</body></html>
