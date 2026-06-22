@@ -1,5 +1,11 @@
 # UFCG Redesign Pages
 
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Vercel Deploy](https://img.shields.io/badge/Vercel-Deploy-blue?logo=vercel)
+![npm version](https://img.shields.io/npm/v/ufcg-redesign-pages.svg)
+![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-3.3.0-%2338B2AC?logo=tailwindcss)
+![React.js](https://img.shields.io/badge/React-18.2.0-%2361DAFB?logo=react)
+
 Proposta de redesign visual, moderno e responsivo do portal da Universidade Federal de Campina Grande (UFCG), desenvolvida com React.js, Vite e Tailwind CSS.
 
 O projeto tem como foco a modernização da interface, a melhor organização das informações, uma navegação institucional mais clara, responsividade, acessibilidade visual e uma identidade acadêmica consistente.
