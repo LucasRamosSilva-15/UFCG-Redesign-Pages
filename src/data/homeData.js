@@ -15,11 +15,11 @@ export const quickAccessItems = [
   { label: 'Biblioteca', icon: 'local_library', href: '#' },
   { label: 'Restaurante Universitário', icon: 'restaurant', href: '#' },
   { label: 'Calendário Acadêmico', icon: 'calendar_month', href: '#' },
-  { label: 'Assistência Estudantil', icon: 'support_agent', href: '#' },
-  { label: 'Editais', icon: 'description', href: '#' },
+  { label: 'Assistência Estudantil', icon: 'support_agent', href: '/assistencia-estudantil' },
+  { label: 'Editais', icon: 'description', href: '/editais' },
   { label: 'Concursos', icon: 'work', href: '#' },
   { label: 'Ouvidoria', icon: 'record_voice_over', href: '#' },
-  { label: 'Campi', icon: 'location_city', href: '#' },
+  { label: 'Campi', icon: 'location_city', href: '/campi' },
 ]
 
 export const featuredNews = {
