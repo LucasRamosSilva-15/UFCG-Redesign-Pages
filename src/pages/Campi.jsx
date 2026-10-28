@@ -6,19 +6,19 @@ export default function Campi() {
       {/* Breadcrumb */}
       <nav className="container-page flex items-center gap-2 py-4 text-xs font-medium leading-4" aria-label="Navegação estrutural">
         <a className="text-primary hover:underline" href="/">Início</a>
-        <span className="material-symbols-outlined text-[15px] text-on-surface-variant" aria-hidden="true">chevron_right</span>
+        <span className="text-on-surface-variant" aria-hidden="true">/</span>
         <span aria-current="page">Campi</span>
       </nav>
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-primary text-white">
         <div className="absolute inset-y-0 left-0 w-1.5 bg-accent" aria-hidden="true" />
-        <div className="container-page relative grid min-h-[420px] items-center gap-10 py-14 md:grid-cols-[1.2fr_0.8fr] md:py-16">
+        <div className="container-page relative grid min-h-[410px] items-center gap-10 py-14 md:grid-cols-[1.2fr_0.8fr] md:py-16">
           <div>
             <p className="mb-3 text-xs font-semibold uppercase leading-4 tracking-[0.05em] text-white/80">Presença em toda a Paraíba</p>
             <h1 className="font-serif text-[34px] font-semibold leading-[1.15] text-white md:text-[48px] md:leading-[56px]">Campi da UFCG</h1>
             <p className="mt-4 font-serif text-xl font-medium leading-8 text-white/90 md:text-2xl">Uma universidade multicampi presente em diferentes regiões da Paraíba.</p>
-            <p className="mt-4 max-w-2xl text-base leading-6 text-white/80">
+            <p className="mt-4 max-w-2xl text-lg leading-7 text-white/85">
               A UFCG atua em 7 campi, fortalecendo o ensino, a pesquisa, a extensão e o desenvolvimento regional por meio de unidades acadêmicas distribuídas pelo estado.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -42,7 +42,7 @@ export default function Campi() {
           <div className="mb-10 max-w-3xl">
             <h2 className="section-title" id="regional-presence-title">Presença regional e desenvolvimento</h2>
             <div className="mt-2 h-1 w-16 bg-accent" aria-hidden="true" />
-            <p className="mt-5 text-base leading-6 text-on-surface-variant">
+            <p className="mt-5 text-lg leading-7 text-on-surface-variant">
               A estrutura multicampi da UFCG é um pilar estratégico para a democratização do ensino superior e o impulsionamento socioeconômico do interior da Paraíba.
             </p>
           </div>
@@ -52,7 +52,7 @@ export default function Campi() {
                 <div className="grid h-12 w-12 place-items-center rounded-lg bg-primary-fixed text-primary">
                   <span className="material-symbols-outlined transition-transform group-hover:scale-110" aria-hidden="true">{item.icon}</span>
                 </div>
-                <h3 className="mt-4 text-lg font-semibold leading-7 text-primary">{item.title}</h3>
+                <h3 className="mt-4 font-serif text-xl font-medium leading-7 text-primary">{item.title}</h3>
                 <p className="mt-2 text-sm leading-5 text-on-surface-variant">{item.description}</p>
               </article>
             ))}
@@ -69,7 +69,7 @@ export default function Campi() {
           </div>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
             {campiItems.map((campus) => (
-              <article className="group flex min-h-[470px] flex-col overflow-hidden rounded-lg border border-border-gray bg-white transition-all hover:border-primary hover:shadow-[0_4px_12px_rgba(0,45,114,0.08)]" key={campus.name}>
+              <article className="group flex h-full flex-col overflow-hidden rounded-lg border border-border-gray bg-white transition-all hover:border-primary hover:shadow-[0_4px_12px_rgba(0,45,114,0.08)]" key={campus.name}>
                 <div className="relative h-48 shrink-0 overflow-hidden bg-surface-container-high">
                   <div className="absolute inset-0 grid place-items-center">
                     <span className="material-symbols-outlined text-[42px] text-primary/25" aria-hidden="true">account_balance</span>
@@ -97,6 +97,25 @@ export default function Campi() {
                 </div>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Chamada final */}
+      <section className="bg-surface-container py-16 text-center md:py-20" aria-labelledby="campi-cta-title">
+        <div className="container-page">
+          <span className="material-symbols-outlined text-[52px] text-primary" aria-hidden="true">location_city</span>
+          <h2 className="section-title mt-3" id="campi-cta-title">A UFCG está presente em toda a Paraíba</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-lg leading-7 text-on-surface-variant">
+            Conheça os cursos e as ações que aproximam a universidade das diferentes regiões do estado.
+          </p>
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            <a className="rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary-dark" href="/cursos">
+              Ver cursos
+            </a>
+            <a className="rounded-lg border border-primary bg-white px-6 py-3 text-sm font-semibold text-primary transition-colors hover:bg-primary-fixed" href="/extensao">
+              Conhecer extensão
+            </a>
           </div>
         </div>
       </section>
