@@ -6,6 +6,13 @@ import {
   socialImpactImage,
   socialImpactPoints,
 } from '../data/extensaoData'
+import HeroNavigation from '../components/HeroNavigation'
+
+const navigationItems = [
+  { label: 'Conheça os projetos', href: '#extensao-na-ufcg' },
+  { label: 'Editais de extensão', href: '#editais' },
+  { label: 'Como participar', href: '#como-participar' },
+]
 
 export default function Extensao() {
   return (
@@ -28,11 +35,7 @@ export default function Extensao() {
             <p className="mt-4 max-w-2xl text-lg leading-7 text-white/85">
               A extensão universitária conecta a UFCG à sociedade por meio de projetos, programas e ações que promovem desenvolvimento social, cultural, científico e tecnológico.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a className="rounded-lg bg-white px-5 py-3 text-sm font-semibold text-primary transition-colors hover:bg-surface-container-low" href="#extensao-na-ufcg">Conheça os projetos</a>
-              <a className="rounded-lg border border-white px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10" href="#editais">Editais de extensão</a>
-              <a className="rounded-lg border border-white px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10" href="#como-participar">Como participar</a>
-            </div>
+            <HeroNavigation items={navigationItems} />
           </div>
           <div className="hidden min-h-[260px] place-items-center border-l border-white/15 md:grid">
             <span className="material-symbols-outlined text-[128px] text-white/15" aria-hidden="true">diversity_1</span>
@@ -41,7 +44,7 @@ export default function Extensao() {
       </section>
 
       {/* Extensão na UFCG */}
-      <section className="py-16 md:py-20" id="extensao-na-ufcg" aria-labelledby="extension-title">
+      <section className="scroll-mt-32 py-16 md:py-20" id="extensao-na-ufcg" aria-labelledby="extension-title">
         <div className="container-page">
           <div className="mb-10 max-w-3xl">
             <h2 className="section-title" id="extension-title">Extensão na UFCG</h2>
@@ -65,7 +68,7 @@ export default function Extensao() {
       </section>
 
       {/* Áreas de atuação */}
-      <section className="border-y border-border-gray bg-surface-container-low py-16" aria-labelledby="action-areas-title">
+      <section className="scroll-mt-32 border-y border-border-gray bg-surface-container-low py-16" id="areas-de-atuacao" aria-labelledby="action-areas-title">
         <div className="container-page">
           <div className="mb-8 flex items-end justify-between gap-5">
             <div>
@@ -87,7 +90,7 @@ export default function Extensao() {
       </section>
 
       {/* Impacto social */}
-      <section className="bg-primary-dark py-16 text-white md:py-20" aria-labelledby="social-impact-title">
+      <section className="scroll-mt-32 bg-primary-dark py-16 text-white md:py-20" id="impacto-social" aria-labelledby="social-impact-title">
         <div className="container-page grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <div>
             <h2 className="font-serif text-[28px] font-semibold leading-9 text-white md:text-[32px] md:leading-10" id="social-impact-title">Impacto social e desenvolvimento regional</h2>
@@ -112,7 +115,7 @@ export default function Extensao() {
       </section>
 
       {/* Como participar */}
-      <section className="py-16 md:py-20" id="como-participar" aria-labelledby="participation-title">
+      <section className="scroll-mt-32 py-16 md:py-20" id="como-participar" aria-labelledby="participation-title">
         <div className="container-page">
           <div className="mb-10 text-center">
             <h2 className="section-title" id="participation-title">Como participar</h2>
@@ -132,7 +135,7 @@ export default function Extensao() {
       </section>
 
       {/* Editais */}
-      <section className="border-y border-border-gray bg-white py-16 md:py-20" id="editais" aria-labelledby="extension-edital-title">
+      <section className="scroll-mt-32 border-y border-border-gray bg-white py-16 md:py-20" id="editais" aria-labelledby="extension-edital-title">
         <div className="container-page">
           <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>

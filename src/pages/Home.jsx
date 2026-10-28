@@ -11,6 +11,13 @@ import {
   quickAccessItems,
   statsItems,
 } from '../data/homeData'
+import HeroNavigation from '../components/HeroNavigation'
+
+const navigationItems = [
+  { label: 'Cursos de graduação', href: '/cursos' },
+  { label: 'Pesquisa e inovação', href: '/pesquisa-e-inovacao' },
+  { label: 'Conheça os campi', href: '/campi' },
+]
 
 function Home() {
   return (
@@ -43,17 +50,7 @@ function Home() {
               ))}
             </div>
 
-            <div className="mt-8 flex flex-wrap gap-4">
-              <a className="rounded-lg bg-primary px-6 py-3 text-sm font-semibold tracking-[0.05em] text-white shadow-sm transition-colors hover:bg-primary-dark" href="#">
-                Conheça a UFCG
-              </a>
-              <a className="rounded-lg border border-primary bg-white px-6 py-3 text-sm font-semibold tracking-[0.05em] text-primary shadow-sm transition-colors hover:bg-surface-container-low" href="#">
-                Cursos de Graduação
-              </a>
-              <a className="rounded-lg border border-white bg-transparent px-6 py-3 text-sm font-semibold tracking-[0.05em] text-white transition-colors hover:bg-white/10" href="#">
-                Editais e Seleções
-              </a>
-            </div>
+            <HeroNavigation items={navigationItems} ariaLabel="Navegação principal" />
           </div>
         </div>
       </section>

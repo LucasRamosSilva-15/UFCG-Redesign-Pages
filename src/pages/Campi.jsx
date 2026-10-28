@@ -1,4 +1,11 @@
 import { campiItems, campusHeroImage, regionalHighlights } from '../data/campiData'
+import HeroNavigation from '../components/HeroNavigation'
+
+const navigationItems = [
+  { label: 'Conheça os campi', href: '#nossos-campi' },
+  { label: 'Presença regional', href: '#presenca-regional' },
+  { label: 'Cursos da UFCG', href: '/cursos' },
+]
 
 export default function Campi() {
   return (
@@ -21,14 +28,7 @@ export default function Campi() {
             <p className="mt-4 max-w-2xl text-lg leading-7 text-white/85">
               A UFCG atua em 7 campi, fortalecendo o ensino, a pesquisa, a extensão e o desenvolvimento regional por meio de unidades acadêmicas distribuídas pelo estado.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a className="rounded-lg bg-white px-5 py-3 text-sm font-semibold text-primary transition-colors hover:bg-surface-container-low" href="#nossos-campi">Conheça os campi</a>
-              <a className="rounded-lg border border-white px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10" href="#nossos-campi">Cursos por campus</a>
-              <a className="inline-flex items-center rounded-lg border border-white px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10" href="#nossos-campi">
-                <span className="material-symbols-outlined mr-2 text-[18px]" aria-hidden="true">map</span>
-                Ver localização
-              </a>
-            </div>
+            <HeroNavigation items={navigationItems} />
           </div>
           <div className="hidden aspect-[4/3] overflow-hidden rounded-lg border border-white/15 bg-primary-dark md:block">
             <img className="h-full w-full object-cover" src={campusHeroImage} alt="Vista do campus sede da UFCG em Campina Grande" />
@@ -37,7 +37,7 @@ export default function Campi() {
       </section>
 
       {/* Presença regional */}
-      <section className="py-16 md:py-20" aria-labelledby="regional-presence-title">
+      <section className="scroll-mt-32 py-16 md:py-20" id="presenca-regional" aria-labelledby="regional-presence-title">
         <div className="container-page">
           <div className="mb-10 max-w-3xl">
             <h2 className="section-title" id="regional-presence-title">Presença regional e desenvolvimento</h2>
@@ -61,7 +61,7 @@ export default function Campi() {
       </section>
 
       {/* Nossos campi */}
-      <section className="border-y border-border-gray bg-surface-container-low py-16 md:py-20" id="nossos-campi" aria-labelledby="campi-title">
+      <section className="scroll-mt-32 border-y border-border-gray bg-surface-container-low py-16 md:py-20" id="nossos-campi" aria-labelledby="campi-title">
         <div className="container-page">
           <div className="mb-10">
             <h2 className="section-title" id="campi-title">Nossos campi</h2>

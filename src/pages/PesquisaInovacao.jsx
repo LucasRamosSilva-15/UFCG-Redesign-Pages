@@ -7,6 +7,13 @@ import {
   scientificInitiationItems,
   statsItems,
 } from '../data/pesquisaInovacaoData'
+import HeroNavigation from '../components/HeroNavigation'
+
+const navigationItems = [
+  { label: 'Conheça os projetos', href: '#pesquisa' },
+  { label: 'Iniciação científica', href: '#iniciacao-cientifica' },
+  { label: 'Editais de pesquisa', href: '#editais' },
+]
 
 export default function PesquisaInovacao() {
   return (
@@ -34,17 +41,7 @@ export default function PesquisaInovacao() {
             <p className="mt-4 max-w-2xl text-lg leading-7 text-white/90">
               Conhecimento científico, desenvolvimento tecnológico e inovação a serviço da sociedade. Liderando a fronteira acadêmica no Nordeste Brasileiro.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a className="rounded-lg bg-white px-5 py-3 text-sm font-semibold text-primary transition-colors hover:bg-surface-container-low" href="#pesquisa">
-                Conheça os projetos
-              </a>
-              <a className="rounded-lg border border-white px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10" href="#iniciacao-cientifica">
-                Iniciação Científica
-              </a>
-              <a className="rounded-lg border border-white px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10" href="#editais">
-                Editais de Pesquisa
-              </a>
-            </div>
+            <HeroNavigation items={navigationItems} />
           </div>
 
           <aside className="rounded-lg border border-white/20 bg-white/5 p-6 md:p-8" aria-label="Destaque da pesquisa">
@@ -62,7 +59,7 @@ export default function PesquisaInovacao() {
       </section>
 
       {/* Pesquisa na UFCG */}
-      <section className="py-16 md:py-20" id="pesquisa" aria-labelledby="research-title">
+      <section className="scroll-mt-32 py-16 md:py-20" id="pesquisa" aria-labelledby="research-title">
         <div className="container-page">
           <div className="mx-auto mb-10 max-w-2xl text-center md:mb-12">
             <h2 className="section-title" id="research-title">Pesquisa na UFCG</h2>
@@ -84,7 +81,7 @@ export default function PesquisaInovacao() {
       </section>
 
       {/* Áreas de Pesquisa */}
-      <section className="border-y border-border-gray bg-white py-16 md:py-20" aria-labelledby="research-areas-title">
+      <section className="scroll-mt-32 border-y border-border-gray bg-white py-16 md:py-20" id="areas-pesquisa" aria-labelledby="research-areas-title">
         <div className="container-page">
           <div className="mb-8 flex flex-col gap-5 md:mb-10 md:flex-row md:items-end md:justify-between">
             <div className="max-w-2xl">
@@ -118,7 +115,7 @@ export default function PesquisaInovacao() {
       </section>
 
       {/* Inovação e Tecnologia */}
-      <section className="bg-primary-dark py-16 text-white md:py-20" aria-labelledby="innovation-title">
+      <section className="scroll-mt-32 bg-primary-dark py-16 text-white md:py-20" id="inovacao-tecnologia" aria-labelledby="innovation-title">
         <div className="container-page grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <div className="aspect-video overflow-hidden rounded-lg border border-white/10 bg-primary">
             <img className="h-full w-full object-cover" src={innovationImage} alt="Pesquisadores trabalhando em um laboratório de tecnologia" loading="lazy" />
@@ -146,7 +143,7 @@ export default function PesquisaInovacao() {
       </section>
 
       {/* Iniciação Científica */}
-      <section className="py-16 md:py-20" id="iniciacao-cientifica" aria-labelledby="scientific-initiation-title">
+      <section className="scroll-mt-32 py-16 md:py-20" id="iniciacao-cientifica" aria-labelledby="scientific-initiation-title">
         <div className="container-page">
           <div className="mx-auto mb-10 max-w-2xl text-center">
             <h2 className="section-title" id="scientific-initiation-title">Iniciação Científica</h2>
@@ -168,7 +165,7 @@ export default function PesquisaInovacao() {
       </section>
 
       {/* Editais */}
-      <section className="border-y border-border-gray bg-white py-16 md:py-20" id="editais" aria-labelledby="edital-title">
+      <section className="scroll-mt-32 border-y border-border-gray bg-white py-16 md:py-20" id="editais" aria-labelledby="edital-title">
         <div className="container-page">
           <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div>

@@ -6,6 +6,13 @@ import {
   postgraduateOptions,
   shiftOptions,
 } from '../data/cursosData'
+import HeroNavigation from '../components/HeroNavigation'
+
+const navigationItems = [
+  { label: 'Ver cursos de graduação', href: '#graduacao' },
+  { label: 'Pós-graduação', href: '#pos-graduacao' },
+  { label: 'Encontre seu curso', href: '#course-search' },
+]
 
 const filterFields = [
   { id: 'campus', label: 'Campus', options: campusOptions },
@@ -41,23 +48,12 @@ export default function Cursos() {
             <p className="mt-4 max-w-2xl text-lg leading-7 text-white/90">
               Explore a diversidade acadêmica da Universidade Federal de Campina Grande. Oferecemos excelência em graduação e pós-graduação, conectando conhecimento e inovação em sete campi.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a className="rounded-lg bg-white px-5 py-3 text-sm font-semibold text-primary transition-colors hover:bg-surface-container-low" href="#graduacao">
-                Ver cursos de graduação
-              </a>
-              <a className="rounded-lg border border-white px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10" href="#pos-graduacao">
-                Pós-graduação
-              </a>
-              <a className="inline-flex items-center rounded-lg border border-white px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10" href="#ingresso">
-                Formas de Ingresso
-                <span className="material-symbols-outlined ml-2 text-[18px]" aria-hidden="true">arrow_forward</span>
-              </a>
-            </div>
+            <HeroNavigation items={navigationItems} />
           </div>
         </div>
       </section>
 
-      <section className="container-page py-10 md:py-12" aria-labelledby="course-search-title">
+      <section className="container-page scroll-mt-32 py-10 md:py-12" id="course-search" aria-labelledby="course-search-title">
         <div className="rounded-lg border border-border-gray bg-white p-5 shadow-[0_4px_12px_rgba(0,45,114,0.08)] md:p-6">
           <div className="mb-6 flex items-center gap-3">
             <span className="material-symbols-outlined text-accent" aria-hidden="true">manage_search</span>
@@ -95,7 +91,7 @@ export default function Cursos() {
         </div>
       </section>
 
-      <section className="container-page pb-16" id="graduacao" aria-labelledby="featured-courses-title">
+      <section className="container-page scroll-mt-32 pb-16" id="graduacao" aria-labelledby="featured-courses-title">
         <div className="mb-7 flex items-end justify-between gap-6">
           <div>
             <h2 id="featured-courses-title" className="section-title">Cursos em Destaque</h2>
@@ -139,7 +135,7 @@ export default function Cursos() {
         </a>
       </section>
 
-      <section className="border-y border-border-gray bg-surface-container-low py-14 md:py-16" id="pos-graduacao" aria-labelledby="postgraduate-title">
+      <section className="scroll-mt-32 border-y border-border-gray bg-surface-container-low py-14 md:py-16" id="pos-graduacao" aria-labelledby="postgraduate-title">
         <div className="container-page">
           <div className="max-w-3xl">
             <h2 id="postgraduate-title" className="section-title">Pós-Graduação</h2>
